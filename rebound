@@ -1,0 +1,2059 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="AI-generated website">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="index, follow">
+      
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- {headerScripts} -->
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Base Styles -->
+      <style>
+
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="6666872e-fbb1-4290-b2da-81ec6544aee7" data-section-id="6666872e-fbb1-4290-b2da-81ec6544aee7">
+
+
+                <htmlcode id="el-hs4sbjez">
+<div id="root">
+  <nav id="navbar" class="fixed w-full z-50 bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-0jndo0sc">
+      <div class="flex justify-between h-16" id="el-dlyr6ddt">
+        <div class="flex items-center" id="el-nfkzct35">
+          <div class="flex-shrink-0" id="el-3xymq1vr">
+            <a href="#" class="text-xl font-bold" id="el-t39awggu">Rebound</a>
+          </div>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8" id="el-deae0q0x">
+          <a href="#materials-catalog" class="hover:text-green-400" id="el-2n63szes">Materials</a>
+          <a href="#price-index" class="hover:text-green-400" id="el-fw8y8tw9">Price Index</a>
+          <a href="#inventory-solutions" class="hover:text-green-400" id="el-w4r4i2xh">Inventory</a>
+          <a href="#service-providers" class="hover:text-green-400" id="el-bqhehyuy">Services</a>
+          <a href="#logistics-finder" class="hover:text-green-400" id="el-nnqrefco">Logistics</a>
+          <a href="#knowledge-center" class="hover:text-green-400" id="el-xb8yuj4d">Knowledge Base</a>
+          <a href="#features-preview" class="hover:text-green-400" id="el-2fo1e6wt">Features</a>
+          <button class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-lg" id="el-18exhz0i">Sign Up</button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center" id="el-qfuzxipl">
+          <button id="mobile-menu-button" class="text-gray-300 hover:text-white">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-tjru1j8g">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" id="el-4aagv0i2"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-neutral-800">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3" id="el-t9j563wh">
+        <a href="#materials-catalog" class="block px-3 py-2 hover:bg-neutral-700" id="el-elp2zlmm">Materials</a>
+        <a href="#price-index" class="block px-3 py-2 hover:bg-neutral-700" id="el-kd2zf4a0">Price Index</a>
+        <a href="#inventory-solutions" class="block px-3 py-2 hover:bg-neutral-700" id="el-calau6xb">Inventory</a>
+        <a href="#service-providers" class="block px-3 py-2 hover:bg-neutral-700" id="el-3rra1cz3">Services</a>
+        <a href="#logistics-finder" class="block px-3 py-2 hover:bg-neutral-700" id="el-8w9jko5l">Logistics</a>
+        <a href="#knowledge-center" class="block px-3 py-2 hover:bg-neutral-700" id="el-5ytfoubs">Knowledge Base</a>
+        <a href="#features-preview" class="block px-3 py-2 hover:bg-neutral-700" id="el-u0ielu5y">Features</a>
+        <div class="px-3 py-2" id="el-itxzaeya">
+          <button class="w-full bg-green-500 hover:bg-green-600 px-4 py-2 rounded-lg" id="el-q0d7m0qn">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+
+    // Handle scroll behavior
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+    
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > lastScrollTop) {
+        navbar.style.transform = 'translateY(-100%)';
+        navbar.style.transition = 'transform 0.3s ease-in-out';
+      } else {
+        navbar.style.transform = 'translateY(0)';
+      }
+      
+      lastScrollTop = scrollTop;
+    });
+  </script>
+</div>
+</htmlcode>
+              </element><element id="8a0bb7a6-b8e4-422e-8e0c-396b5967ce61" data-section-id="8a0bb7a6-b8e4-422e-8e0c-396b5967ce61">
+
+<htmlCode>
+<div id="root">
+  <section id="hero" class="bg-neutral-900 text-white min-h-[70vh] pt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center py-16">
+        <div class="animate__animated animate__fadeInLeft">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Your Global B2B<br/>
+            <span class="text-green-500">Recycling Marketplace</span>
+          </h1>
+          <p class="text-xl text-gray-300 mb-8">
+            Connect with verified suppliers, access real-time pricing, and manage your recycling inventory - all in one platform.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <div class="relative">
+              <input 
+                type="text" 
+                placeholder="Search materials, products, or services..." 
+                class="w-full px-6 py-3 rounded-lg bg-neutral-800 border border-neutral-700 focus:outline-none focus:border-green-500 text-white"
+              >
+              <button class="absolute right-2 top-1/2 transform -translate-y-1/2">
+                <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </button>
+            </div>
+            <button class="bg-green-500 hover:bg-green-600 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+              Get Started
+            </button>
+          </div>
+          <div class="mt-8 flex items-center space-x-6 text-sm text-gray-400">
+            <div class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Verified Suppliers</span>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              <span>Secure Platform</span>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <span>Real-time Updates</span>
+            </div>
+          </div>
+        </div>
+        <div class="hidden lg:block animate__animated animate__fadeInRight">
+          <div class="relative">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg blur opacity-20"></div>
+            <div class="relative bg-neutral-800 p-8 rounded-lg">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-neutral-700 p-4 rounded-lg">
+                  <h3 class="font-semibold mb-2">Materials Listed</h3>
+                  <p class="text-2xl font-bold text-green-500">1000+</p>
+                </div>
+                <div class="bg-neutral-700 p-4 rounded-lg">
+                  <h3 class="font-semibold mb-2">Active Suppliers</h3>
+                  <p class="text-2xl font-bold text-green-500">500+</p>
+                </div>
+                <div class="bg-neutral-700 p-4 rounded-lg">
+                  <h3 class="font-semibold mb-2">Global Ports</h3>
+                  <p class="text-2xl font-bold text-green-500">150+</p>
+                </div>
+                <div class="bg-neutral-700 p-4 rounded-lg">
+                  <h3 class="font-semibold mb-2">Daily Trades</h3>
+                  <p class="text-2xl font-bold text-green-500">2000+</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="ac4a1e94-084e-452f-83e6-32a7fc3a82e1" data-section-id="ac4a1e94-084e-452f-83e6-32a7fc3a82e1">
+
+<htmlCode>
+<div id="root">
+  <section id="materials-catalog" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Raw Materials Catalog</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Browse through our extensive collection of recyclable materials, complete with detailed specifications and ratings.</p>
+      </div>
+
+      <div class="mb-8">
+        <div class="flex flex-col md:flex-row gap-4">
+          <div class="flex-grow">
+            <input type="text" id="material-search" placeholder="Search materials by name, type, or grade..." 
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+          </div>
+          <div class="flex gap-2">
+            <select class="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500">
+              <option value="">Material Type</option>
+              <option value="plastic">Plastics</option>
+              <option value="metal">Metals</option>
+              <option value="paper">Paper</option>
+              <option value="glass">Glass</option>
+            </select>
+            <select class="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500">
+              <option value="">Grade</option>
+              <option value="premium">Premium</option>
+              <option value="standard">Standard</option>
+              <option value="economy">Economy</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <!-- Material Card 1 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow animate__animated animate__fadeIn">
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-semibold">PET Plastic Flakes</h3>
+              <div class="flex items-center">
+                <span class="text-yellow-400">★</span>
+                <span class="ml-1">4.8/5</span>
+              </div>
+            </div>
+            <div class="space-y-2 text-sm text-gray-600 mb-4">
+              <p><span class="font-medium">Type:</span> Plastic</p>
+              <p><span class="font-medium">Grade:</span> Premium</p>
+              <p><span class="font-medium">Available Stock:</span> 500 MT</p>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-green-100 text-green-800">
+                Verified Supplier
+              </div>
+              <button class="text-green-500 hover:text-green-600 font-medium">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Material Card 2 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow animate__animated animate__fadeIn">
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-semibold">Aluminum Scrap</h3>
+              <div class="flex items-center">
+                <span class="text-yellow-400">★</span>
+                <span class="ml-1">4.6/5</span>
+              </div>
+            </div>
+            <div class="space-y-2 text-sm text-gray-600 mb-4">
+              <p><span class="font-medium">Type:</span> Metal</p>
+              <p><span class="font-medium">Grade:</span> Standard</p>
+              <p><span class="font-medium">Available Stock:</span> 300 MT</p>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-green-100 text-green-800">
+                Verified Supplier
+              </div>
+              <button class="text-green-500 hover:text-green-600 font-medium">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Material Card 3 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow animate__animated animate__fadeIn">
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-semibold">Waste Paper</h3>
+              <div class="flex items-center">
+                <span class="text-yellow-400">★</span>
+                <span class="ml-1">4.7/5</span>
+              </div>
+            </div>
+            <div class="space-y-2 text-sm text-gray-600 mb-4">
+              <p><span class="font-medium">Type:</span> Paper</p>
+              <p><span class="font-medium">Grade:</span> Premium</p>
+              <p><span class="font-medium">Available Stock:</span> 1000 MT</p>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-green-100 text-green-800">
+                Verified Supplier
+              </div>
+              <button class="text-green-500 hover:text-green-600 font-medium">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+          Load More Materials
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('material-search').addEventListener('input', function(e) {
+      // Implement search functionality
+      console.log('Searching for:', e.target.value);
+    });
+
+    // Add animation on scroll
+    function reveal() {
+      const cards = document.querySelectorAll('.animate__animated');
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        const triggerBottom = window.innerHeight * 0.8;
+        
+        if (cardTop < triggerBottom) {
+          card.classList.add('animate__fadeIn');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', reveal);
+    reveal(); // Initial check
+  </script>
+</div>
+</htmlCode></element><element id="6817eb58-d223-4a98-bc43-241fa8aebd30" data-section-id="6817eb58-d223-4a98-bc43-241fa8aebd30">
+
+<htmlCode>
+<div id="root">
+  <section id="price-index" class="py-16 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Material Price Index</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Track real-time price trends for commonly traded recycled materials across global markets.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <!-- Price Chart -->
+        <div class="lg:col-span-2 bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeInLeft">
+          <div class="flex justify-between items-center mb-6">
+            <h3 class="text-xl font-semibold">Price Trends</h3>
+            <div class="flex gap-2">
+              <button class="px-3 py-1 rounded-full bg-green-100 text-green-800 text-sm">1W</button>
+              <button class="px-3 py-1 rounded-full bg-gray-100 text-gray-800 text-sm">1M</button>
+              <button class="px-3 py-1 rounded-full bg-gray-100 text-gray-800 text-sm">3M</button>
+              <button class="px-3 py-1 rounded-full bg-gray-100 text-gray-800 text-sm">1Y</button>
+            </div>
+          </div>
+          <div class="h-64 bg-gray-50 rounded-lg border border-gray-200 flex items-center justify-center">
+            <p class="text-gray-500">Interactive Price Chart</p>
+          </div>
+        </div>
+
+        <!-- Top Movers -->
+        <div class="bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeInRight">
+          <h3 class="text-xl font-semibold mb-6">Top Price Movers</h3>
+          <div class="space-y-4">
+            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+              <div>
+                <p class="font-medium">PET Flakes</p>
+                <p class="text-sm text-gray-500">Clear Grade A</p>
+              </div>
+              <div class="text-green-500">+5.2%</div>
+            </div>
+            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+              <div>
+                <p class="font-medium">Aluminum Scrap</p>
+                <p class="text-sm text-gray-500">Mixed</p>
+              </div>
+              <div class="text-red-500">-2.1%</div>
+            </div>
+            <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+              <div>
+                <p class="font-medium">Waste Paper</p>
+                <p class="text-sm text-gray-500">OCC</p>
+              </div>
+              <div class="text-green-500">+3.7%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-8 mb-12 animate__animated animate__fadeIn">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="space-y-2">
+            <h4 class="font-semibold">Plastics</h4>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex justify-between">PET <span>$0.85/kg</span></li>
+              <li class="flex justify-between">HDPE <span>$0.92/kg</span></li>
+              <li class="flex justify-between">PP <span>$0.78/kg</span></li>
+            </ul>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-semibold">Metals</h4>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex justify-between">Aluminum <span>$1.85/kg</span></li>
+              <li class="flex justify-between">Copper <span>$7.25/kg</span></li>
+              <li class="flex justify-between">Steel <span>$0.45/kg</span></li>
+            </ul>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-semibold">Paper</h4>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex justify-between">OCC <span>$0.15/kg</span></li>
+              <li class="flex justify-between">ONP <span>$0.22/kg</span></li>
+              <li class="flex justify-between">Mixed Paper <span>$0.12/kg</span></li>
+            </ul>
+          </div>
+          <div class="space-y-2">
+            <h4 class="font-semibold">Glass</h4>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex justify-between">Clear <span>$0.08/kg</span></li>
+              <li class="flex justify-between">Green <span>$0.06/kg</span></li>
+              <li class="flex justify-between">Mixed <span>$0.04/kg</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center bg-green-50 rounded-xl p-8 animate__animated animate__fadeIn">
+        <h3 class="text-2xl font-bold mb-4">Get Full Access to Price Index</h3>
+        <p class="text-gray-600 mb-6">Subscribe to receive detailed price analytics, market reports, and price forecasts</p>
+        <button class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+          Subscribe Now
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Animation on scroll
+    function reveal() {
+      const elements = document.querySelectorAll('.animate__animated');
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const triggerBottom = window.innerHeight * 0.8;
+        
+        if (elementTop < triggerBottom) {
+          element.style.visibility = 'visible';
+          element.classList.add('animate__fadeIn');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', reveal);
+    reveal();
+  </script>
+</div>
+</htmlCode></element><element id="56df4631-a8bf-4660-8a17-b8600cde4589" data-section-id="56df4631-a8bf-4660-8a17-b8600cde4589">
+
+<htmlCode>
+<div id="root">
+  <section id="inventory-solutions" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Inventory Management Solutions</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Streamline your recycling operations with our comprehensive inventory management system</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div class="space-y-8 animate__animated animate__fadeInLeft">
+          <div class="bg-neutral-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+            <div class="flex items-start space-x-4">
+              <div class="bg-green-100 p-3 rounded-lg">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Real-time Tracking</h3>
+                <p class="text-gray-600">Monitor inventory levels, movements, and transactions in real-time across multiple locations</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-neutral-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+            <div class="flex items-start space-x-4">
+              <div class="bg-green-100 p-3 rounded-lg">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Analytics Dashboard</h3>
+                <p class="text-gray-600">Comprehensive analytics and reporting tools for data-driven decision making</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-neutral-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+            <div class="flex items-start space-x-4">
+              <div class="bg-green-100 p-3 rounded-lg">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Automated Alerts</h3>
+                <p class="text-gray-600">Set custom alerts for low stock levels, price changes, and inventory movements</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-neutral-50 rounded-xl p-8 border border-gray-200 animate__animated animate__fadeInRight">
+          <div class="bg-white rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl font-semibold mb-6">Platform Preview</h3>
+            <div class="space-y-4">
+              <div class="h-48 bg-gray-100 rounded-lg flex items-center justify-center">
+                <p class="text-gray-500">Interactive Demo Dashboard</p>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-gray-100 p-4 rounded-lg">
+                  <p class="font-medium">Total Stock</p>
+                  <p class="text-2xl font-bold text-green-600">1,234 MT</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg">
+                  <p class="font-medium">Active Orders</p>
+                  <p class="text-2xl font-bold text-green-600">56</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-green-50 rounded-xl p-8 text-center animate__animated animate__fadeIn">
+        <h3 class="text-2xl font-bold mb-4">Ready to Optimize Your Inventory Management?</h3>
+        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Get access to our full suite of inventory management tools and start streamlining your operations today.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+            Start Free Trial
+          </button>
+          <button class="bg-white hover:bg-gray-50 text-green-500 px-8 py-3 rounded-lg font-semibold border border-green-500 transition-colors duration-300">
+            Schedule Demo
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function reveal() {
+      const elements = document.querySelectorAll('.animate__animated');
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const triggerBottom = window.innerHeight * 0.8;
+        
+        if (elementTop < triggerBottom) {
+          element.style.visibility = 'visible';
+          element.classList.add('animate__fadeIn');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', reveal);
+    reveal();
+  </script>
+</div>
+</htmlCode></element><element id="70417c68-6e46-4302-ac32-22a07d1e0d20" data-section-id="70417c68-6e46-4302-ac32-22a07d1e0d20">
+
+<htmlCode>
+<div id="root">
+  <section id="service-providers" class="py-16 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Service Providers Network</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Connect with verified service providers across certification, logistics, ESG consulting, and collection services</p>
+      </div>
+
+      <!-- Service Categories Tabs -->
+      <div class="mb-12">
+        <div class="flex flex-wrap justify-center gap-4 mb-8" role="tablist">
+          <button class="px-6 py-2 bg-green-500 text-white rounded-full" role="tab" data-tab="certifiers">Certifiers</button>
+          <button class="px-6 py-2 bg-white text-gray-600 rounded-full" role="tab" data-tab="logistics">Logistics Providers</button>
+          <button class="px-6 py-2 bg-white text-gray-600 rounded-full" role="tab" data-tab="esg">ESG Consultants</button>
+          <button class="px-6 py-2 bg-white text-gray-600 rounded-full" role="tab" data-tab="collectors">Collectors</button>
+        </div>
+
+        <!-- Certifiers Tab Content -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-content="certifiers">
+          <!-- Provider Card 1 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeIn">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-semibold">Global Cert Co.</h3>
+              <div class="flex items-center">
+                <span class="text-yellow-400">★</span>
+                <span class="ml-1">4.9/5</span>
+              </div>
+            </div>
+            <div class="space-y-3 mb-4">
+              <p class="text-gray-600">ISO Certification Specialist</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">ISO 9001</span>
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">ISO 14001</span>
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">ISO 45001</span>
+              </div>
+            </div>
+            <div class="border-t pt-4">
+              <button class="text-green-500 hover:text-green-600 font-medium">View Case Studies →</button>
+            </div>
+          </div>
+
+          <!-- Provider Card 2 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeIn">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-semibold">EcoVerify</h3>
+              <div class="flex items-center">
+                <span class="text-yellow-400">★</span>
+                <span class="ml-1">4.8/5</span>
+              </div>
+            </div>
+            <div class="space-y-3 mb-4">
+              <p class="text-gray-600">Environmental Certification Expert</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">GRS</span>
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">RCS</span>
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">FSC</span>
+              </div>
+            </div>
+            <div class="border-t pt-4">
+              <button class="text-green-500 hover:text-green-600 font-medium">View Case Studies →</button>
+            </div>
+          </div>
+
+          <!-- Provider Card 3 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeIn">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-semibold">RecycleCert</h3>
+              <div class="flex items-center">
+                <span class="text-yellow-400">★</span>
+                <span class="ml-1">4.7/5</span>
+              </div>
+            </div>
+            <div class="space-y-3 mb-4">
+              <p class="text-gray-600">Recycling Standards Certification</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">R2</span>
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">e-Stewards</span>
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">WEEELABEX</span>
+              </div>
+            </div>
+            <div class="border-t pt-4">
+              <button class="text-green-500 hover:text-green-600 font-medium">View Case Studies →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Case Study -->
+      <div class="bg-white rounded-xl shadow-lg p-8 mb-12 animate__animated animate__fadeIn">
+        <h3 class="text-2xl font-bold mb-6">Featured Case Study</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h4 class="text-xl font-semibold mb-4">Global Certification Success Story</h4>
+            <p class="text-gray-600 mb-4">How EcoVerify helped a major recycling facility achieve multiple certifications in record time</p>
+            <ul class="space-y-2 text-gray-600 mb-6">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                50% faster certification process
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                30% cost reduction
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                100% compliance achieved
+              </li>
+            </ul>
+            <button class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors duration-300">
+              Read Full Case Study
+            </button>
+          </div>
+          <div class="bg-gray-100 rounded-lg flex items-center justify-center">
+            <p class="text-gray-500">Case Study Highlights</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+          View All Service Providers
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Tab switching functionality
+    const tabs = document.querySelectorAll('[role="tab"]');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active state from all tabs
+        tabs.forEach(t => {
+          t.classList.remove('bg-green-500', 'text-white');
+          t.classList.add('bg-white', 'text-gray-600');
+        });
+        
+        // Add active state to clicked tab
+        tab.classList.remove('bg-white', 'text-gray-600');
+        tab.classList.add('bg-green-500', 'text-white');
+      });
+    });
+
+    // Animation on scroll
+    function reveal() {
+      const elements = document.querySelectorAll('.animate__animated');
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const triggerBottom = window.innerHeight * 0.8;
+        
+        if (elementTop < triggerBottom) {
+          element.style.visibility = 'visible';
+          element.classList.add('animate__fadeIn');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', reveal);
+    reveal();
+  </script>
+</div>
+</htmlCode></element><element id="43b0924d-c453-4482-8e55-839dd2765ad3" data-section-id="43b0924d-c453-4482-8e55-839dd2765ad3">
+
+<htmlCode>
+<div id="root">
+  <section id="logistics-finder" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Logistics Route Finder</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Find the most reliable logistics providers for your specific route requirements</p>
+      </div>
+
+      <!-- Search Form -->
+      <div class="max-w-4xl mx-auto mb-12 animate__animated animate__fadeIn">
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <form id="logistics-search-form" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Origin Port/Country</label>
+                <div class="relative">
+                  <input type="text" id="origin" placeholder="Enter origin location" 
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                </div>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Destination Port/Country</label>
+                <div class="relative">
+                  <input type="text" id="destination" placeholder="Enter destination location" 
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Material Type</label>
+                <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                  <option value="">Select type</option>
+                  <option value="plastic">Plastic</option>
+                  <option value="metal">Metal</option>
+                  <option value="paper">Paper</option>
+                  <option value="glass">Glass</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Shipment Size</label>
+                <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                  <option value="">Select size</option>
+                  <option value="container_20">20ft Container</option>
+                  <option value="container_40">40ft Container</option>
+                  <option value="bulk">Bulk Shipment</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Service Type</label>
+                <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                  <option value="">Select service</option>
+                  <option value="door_to_door">Door to Door</option>
+                  <option value="port_to_port">Port to Port</option>
+                  <option value="door_to_port">Door to Port</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="flex justify-center">
+              <button type="submit" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+                Find Logistics Providers
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Results Section -->
+      <div id="logistics-results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <!-- Provider Card 1 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeIn">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-xl font-semibold">EcoLogistics Global</h3>
+            <div class="flex items-center">
+              <span class="text-yellow-400">★</span>
+              <span class="ml-1">4.8/5</span>
+            </div>
+          </div>
+          <div class="space-y-3 mb-4">
+            <div class="flex items-center text-gray-600">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+              <span>Global Coverage</span>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Door to Door</span>
+              <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Customs Clearance</span>
+            </div>
+          </div>
+          <button class="w-full bg-neutral-100 hover:bg-neutral-200 text-gray-800 py-2 rounded-lg transition-colors duration-300">
+            View Details
+          </button>
+        </div>
+
+        <!-- Provider Card 2 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeIn">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-xl font-semibold">GreenShip Express</h3>
+            <div class="flex items-center">
+              <span class="text-yellow-400">★</span>
+              <span class="ml-1">4.7/5</span>
+            </div>
+          </div>
+          <div class="space-y-3 mb-4">
+            <div class="flex items-center text-gray-600">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+              <span>Asia-Pacific Specialist</span>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Port to Port</span>
+              <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Bulk Shipping</span>
+            </div>
+          </div>
+          <button class="w-full bg-neutral-100 hover:bg-neutral-200 text-gray-800 py-2 rounded-lg transition-colors duration-300">
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('logistics-search-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Add search functionality here
+      console.log('Search submitted');
+    });
+
+    // Animation on scroll
+    function reveal() {
+      const elements = document.querySelectorAll('.animate__animated');
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const triggerBottom = window.innerHeight * 0.8;
+        
+        if (elementTop < triggerBottom) {
+          element.style.visibility = 'visible';
+          element.classList.add('animate__fadeIn');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', reveal);
+    reveal();
+  </script>
+</div>
+</htmlCode></element><element id="b403efdd-f5b9-4bd6-b024-46419f6d4bd6" data-section-id="b403efdd-f5b9-4bd6-b024-46419f6d4bd6">
+
+<htmlCode>
+<div id="root">
+  <section id="news-updates" class="py-16 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Latest News & Updates</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Stay informed about price movements, material availability, and port updates</p>
+      </div>
+
+      <div class="mb-12">
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+          <button class="px-6 py-2 bg-green-500 text-white rounded-full">All Updates</button>
+          <button class="px-6 py-2 bg-white text-gray-600 rounded-full">Price Movements</button>
+          <button class="px-6 py-2 bg-white text-gray-600 rounded-full">Material Availability</button>
+          <button class="px-6 py-2 bg-white text-gray-600 rounded-full">Port Updates</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Featured News Card -->
+          <div class="col-span-full lg:col-span-2 bg-white rounded-xl shadow-lg overflow-hidden animate__animated animate__fadeIn">
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-sm text-green-600 mb-3">
+                <span class="px-3 py-1 bg-green-100 rounded-full">Featured</span>
+                <span>Price Movement</span>
+              </div>
+              <h3 class="text-2xl font-bold mb-3">Global PET Prices Show Strong Recovery in Q2 2024</h3>
+              <p class="text-gray-600 mb-4">Analysis of recent price trends shows significant improvement in PET markets across Asia and Europe, indicating strong recovery...</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">2 hours ago</span>
+                <button class="text-green-500 hover:text-green-600 font-medium">Read More →</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Regular News Cards -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden animate__animated animate__fadeIn">
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-sm text-blue-600 mb-3">
+                <span class="px-3 py-1 bg-blue-100 rounded-full">Port Update</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Rotterdam Port Enhances Recycling Infrastructure</h3>
+              <p class="text-gray-600 mb-4">New facilities being added to handle increased recycling material flow...</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">1 day ago</span>
+                <button class="text-green-500 hover:text-green-600 font-medium">Read More →</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden animate__animated animate__fadeIn">
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-sm text-orange-600 mb-3">
+                <span class="px-3 py-1 bg-orange-100 rounded-full">Material Update</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Aluminum Scrap Availability Report Q2 2024</h3>
+              <p class="text-gray-600 mb-4">Latest survey indicates increased availability of high-grade aluminum scrap...</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">2 days ago</span>
+                <button class="text-green-500 hover:text-green-600 font-medium">Read More →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Market Indicators -->
+      <div class="bg-white rounded-xl shadow-lg p-6 mb-12 animate__animated animate__fadeIn">
+        <h3 class="text-xl font-bold mb-6">Market Indicators</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-4 bg-neutral-50 rounded-lg">
+            <h4 class="font-semibold mb-2">PET Price Index</h4>
+            <div class="flex items-center">
+              <span class="text-2xl font-bold text-green-500">↑ 3.2%</span>
+              <span class="ml-2 text-sm text-gray-500">vs last week</span>
+            </div>
+          </div>
+          <div class="p-4 bg-neutral-50 rounded-lg">
+            <h4 class="font-semibold mb-2">Metal Scrap Volume</h4>
+            <div class="flex items-center">
+              <span class="text-2xl font-bold text-red-500">↓ 1.5%</span>
+              <span class="ml-2 text-sm text-gray-500">vs last month</span>
+            </div>
+          </div>
+          <div class="p-4 bg-neutral-50 rounded-lg">
+            <h4 class="font-semibold mb-2">Port Congestion Index</h4>
+            <div class="flex items-center">
+              <span class="text-2xl font-bold text-green-500">↑ 5.7%</span>
+              <span class="ml-2 text-sm text-gray-500">improvement</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+          Subscribe to Updates
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function reveal() {
+      const elements = document.querySelectorAll('.animate__animated');
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const triggerBottom = window.innerHeight * 0.8;
+        
+        if (elementTop < triggerBottom) {
+          element.style.visibility = 'visible';
+          element.classList.add('animate__fadeIn');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', reveal);
+    reveal();
+  </script>
+</div>
+</htmlCode></element><element id="4c248757-3bd2-464f-91a6-05ffd6851b5b" data-section-id="4c248757-3bd2-464f-91a6-05ffd6851b5b">
+
+<htmlCode>
+<div id="root">
+  <section id="knowledge-center" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Knowledge Center</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive resources and guides for the recycling industry</p>
+      </div>
+
+      <!-- Search and Filter Bar -->
+      <div class="mb-12">
+        <div class="flex flex-col md:flex-row gap-4">
+          <div class="flex-grow">
+            <input type="text" placeholder="Search articles, guides, and resources..." 
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-transparent">
+          </div>
+          <select class="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500">
+            <option value="">All Categories</option>
+            <option value="regulations">Regulations & Policies</option>
+            <option value="certifications">Certifications</option>
+            <option value="processes">Recycling Processes</option>
+            <option value="materials">Material Classifications</option>
+            <option value="best-practices">Best Practices</option>
+            <option value="sustainability">Sustainability Metrics</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Featured Articles Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <!-- Featured Article -->
+        <div class="col-span-full lg:col-span-2 bg-neutral-900 text-white rounded-xl overflow-hidden animate__animated animate__fadeIn">
+          <div class="p-8">
+            <div class="flex items-center gap-2 text-sm mb-4">
+              <span class="px-3 py-1 bg-green-500 rounded-full">Featured Guide</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Complete Guide to Global Recycling Certifications 2024</h3>
+            <p class="text-gray-300 mb-6">A comprehensive overview of international recycling certifications, requirements, and application processes...</p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-4">
+                <span class="text-sm text-gray-400">15 min read</span>
+                <span class="text-sm text-gray-400">Updated: Jan 2024</span>
+              </div>
+              <button class="px-6 py-2 bg-green-500 hover:bg-green-600 rounded-lg transition-colors duration-300">
+                Read Guide
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Cards -->
+        <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-6 hover:shadow-xl transition-shadow animate__animated animate__fadeIn">
+          <h3 class="text-xl font-bold mb-4">Regulations & Policies</h3>
+          <p class="text-gray-600 mb-4">Country-specific guidelines and regulatory frameworks for recycling operations.</p>
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-gray-500">25 articles</span>
+            <button class="text-green-500 hover:text-green-600 font-medium">Explore →</button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-6 hover:shadow-xl transition-shadow animate__animated animate__fadeIn">
+          <h3 class="text-xl font-bold mb-4">Best Practices</h3>
+          <p class="text-gray-600 mb-4">Industry-leading practices and operational excellence guidelines.</p>
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-gray-500">18 articles</span>
+            <button class="text-green-500 hover:text-green-600 font-medium">Explore →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Latest Articles -->
+      <div class="mb-12">
+        <h3 class="text-2xl font-bold mb-6">Latest Resources</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Article List -->
+          <div class="space-y-4">
+            <div class="p-4 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+              <div class="flex justify-between items-start">
+                <div>
+                  <span class="text-sm text-green-600 bg-green-100 px-3 py-1 rounded-full">Process Guide</span>
+                  <h4 class="font-semibold mt-2">PET Recycling Process Optimization</h4>
+                  <p class="text-sm text-gray-600 mt-1">Step-by-step guide to optimize PET recycling efficiency...</p>
+                </div>
+                <button class="text-green-500 hover:text-green-600">Read →</button>
+              </div>
+            </div>
+
+            <div class="p-4 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+              <div class="flex justify-between items-start">
+                <div>
+                  <span class="text-sm text-blue-600 bg-blue-100 px-3 py-1 rounded-full">Certification</span>
+                  <h4 class="font-semibold mt-2">ISO Certification Checklist</h4>
+                  <p class="text-sm text-gray-600 mt-1">Complete checklist for ISO certification preparation...</p>
+                </div>
+                <button class="text-green-500 hover:text-green-600">Read →</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Topics List -->
+          <div class="bg-neutral-50 rounded-xl p-6">
+            <h4 class="font-semibold mb-4">Popular Topics</h4>
+            <div class="space-y-3">
+              <a href="#" class="flex items-center justify-between hover:bg-neutral-100 p-2 rounded">
+                <span>Material Classification Guide</span>
+                <span class="text-green-500">→</span>
+              </a>
+              <a href="#" class="flex items-center justify-between hover:bg-neutral-100 p-2 rounded">
+                <span>Sustainability Metrics</span>
+                <span class="text-green-500">→</span>
+              </a>
+              <a href="#" class="flex items-center justify-between hover:bg-neutral-100 p-2 rounded">
+                <span>EU Recycling Regulations</span>
+                <span class="text-green-500">→</span>
+              </a>
+              <a href="#" class="flex items-center justify-between hover:bg-neutral-100 p-2 rounded">
+                <span>Quality Control Standards</span>
+                <span class="text-green-500">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+          View All Resources
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function reveal() {
+      const elements = document.querySelectorAll('.animate__animated');
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const triggerBottom = window.innerHeight * 0.8;
+        
+        if (elementTop < triggerBottom) {
+          element.style.visibility = 'visible';
+          element.classList.add('animate__fadeIn');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', reveal);
+    reveal();
+  </script>
+</div>
+</htmlCode></element><element id="433b609a-711a-4cc5-b299-e85d661735af" data-section-id="433b609a-711a-4cc5-b299-e85d661735af">
+
+<htmlCode>
+<div id="root">
+  <section id="features-preview" class="py-16 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Platform Features</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Discover the powerful tools and features designed to streamline your recycling operations</p>
+      </div>
+
+      <!-- Interactive Feature Tabs -->
+      <div class="mb-16">
+        <div class="flex flex-wrap justify-center gap-4 mb-8" role="tablist">
+          <button class="px-6 py-2 bg-green-500 text-white rounded-full" data-tab="trading">Trading Tools</button>
+          <button class="px-6 py-2 bg-white text-gray-600 rounded-full" data-tab="inventory">Inventory Management</button>
+          <button class="px-6 py-2 bg-white text-gray-600 rounded-full" data-tab="analytics">Analytics Dashboard</button>
+          <button class="px-6 py-2 bg-white text-gray-600 rounded-full" data-tab="compliance">Compliance Tools</button>
+        </div>
+
+        <!-- Feature Preview Cards -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div class="bg-white p-8 rounded-xl shadow-lg animate__animated animate__fadeInLeft">
+            <div class="mb-6">
+              <h3 class="text-2xl font-bold mb-4">Real-time Trading Platform</h3>
+              <p class="text-gray-600">Access live market data, connect with verified suppliers, and manage transactions securely.</p>
+            </div>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="bg-green-100 p-2 rounded-lg">
+                  <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Live Market Data</h4>
+                  <p class="text-gray-600 text-sm">Track real-time prices and market trends</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="bg-green-100 p-2 rounded-lg">
+                  <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Secure Transactions</h4>
+                  <p class="text-gray-600 text-sm">End-to-end encrypted transaction processing</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-neutral-900 text-white p-8 rounded-xl shadow-lg animate__animated animate__fadeInRight">
+            <div class="mb-8">
+              <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-semibold">Platform Demo</h3>
+                <span class="px-3 py-1 bg-green-500 text-white rounded-full text-sm">Live Preview</span>
+              </div>
+              <div class="bg-neutral-800 rounded-lg p-4 h-64 flex items-center justify-center">
+                <p class="text-gray-400">Interactive Demo Interface</p>
+              </div>
+            </div>
+            <button class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg transition-colors duration-300">
+              Try Demo Version
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Statistics -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center animate__animated animate__fadeIn">
+          <div class="text-3xl font-bold text-green-500 mb-2">10K+</div>
+          <p class="text-gray-600">Active Users</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center animate__animated animate__fadeIn">
+          <div class="text-3xl font-bold text-green-500 mb-2">50M+</div>
+          <p class="text-gray-600">Transactions Processed</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg text-center animate__animated animate__fadeIn">
+          <div class="text-3xl font-bold text-green-500 mb-2">99.9%</div>
+          <p class="text-gray-600">Uptime</p>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="text-center animate__animated animate__fadeIn">
+        <h3 class="text-2xl font-bold mb-4">Ready to Experience the Full Platform?</h3>
+        <p class="text-gray-600 mb-8">Get started with our comprehensive suite of recycling management tools</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
+            Start Free Trial
+          </button>
+          <button class="bg-white hover:bg-gray-50 text-green-500 px-8 py-3 rounded-lg font-semibold border border-green-500 transition-colors duration-300">
+            Schedule Demo
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const tabs = document.querySelectorAll('[data-tab]');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.classList.remove('bg-green-500', 'text-white');
+          t.classList.add('bg-white', 'text-gray-600');
+        });
+        tab.classList.remove('bg-white', 'text-gray-600');
+        tab.classList.add('bg-green-500', 'text-white');
+      });
+    });
+
+    function reveal() {
+      const elements = document.querySelectorAll('.animate__animated');
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const triggerBottom = window.innerHeight * 0.8;
+        
+        if (elementTop < triggerBottom) {
+          element.style.visibility = 'visible';
+          element.classList.add('animate__fadeIn');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', reveal);
+    reveal();
+  </script>
+</div>
+</htmlCode></element><element id="4bc7c5f2-5811-458f-900f-1b6879914160" data-section-id="4bc7c5f2-5811-458f-900f-1b6879914160">
+
+<htmlCode>
+<div id="root">
+    <section id="interactive-map" class="py-16 bg-neutral-50 dark:bg-neutral-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">Find Recycling Centers Near You</h2>
+                <p class="text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">Discover local drop-off locations and recycling facilities with detailed information about accepted materials and operating hours.</p>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-lg p-6">
+                <div class="grid lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-1">
+                        <div class="space-y-4">
+                            <div class="relative">
+                                <input type="text" placeholder="Search location..." class="w-full px-4 py-3 border border-neutral-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-neutral-700 dark:text-neutral-100">
+                                <button class="absolute right-3 top-3 text-neutral-500 dark:text-neutral-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-neutral-700 dark:text-neutral-200">Filter by Material Type</label>
+                                <select class="w-full px-4 py-3 border border-neutral-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-neutral-700 dark:text-neutral-100">
+                                    <option value="">All Materials</option>
+                                    <option value="plastic">Plastic</option>
+                                    <option value="metal">Metal</option>
+                                    <option value="paper">Paper</option>
+                                    <option value="glass">Glass</option>
+                                    <option value="electronics">Electronics</option>
+                                </select>
+                            </div>
+
+                            <div id="facility-list" class="mt-6 space-y-4 max-h-[500px] overflow-y-auto">
+                                <!-- Facility Cards -->
+                                <div class="p-4 bg-neutral-100 dark:bg-neutral-700 rounded-lg cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-600 transition">
+                                    <h3 class="font-semibold text-neutral-800 dark:text-neutral-100">EcoRecycle Center</h3>
+                                    <p class="text-sm text-neutral-600 dark:text-neutral-300">123 Green Street, City</p>
+                                    <div class="mt-2 flex items-center text-sm text-neutral-500 dark:text-neutral-400">
+                                        <span class="mr-2">Open: 9AM - 6PM</span>
+                                        <span class="px-2 py-1 text-xs bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100 rounded">Open Now</span>
+                                    </div>
+                                </div>
+
+                                <div class="p-4 bg-neutral-100 dark:bg-neutral-700 rounded-lg cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-600 transition">
+                                    <h3 class="font-semibold text-neutral-800 dark:text-neutral-100">GreenTech Recycling</h3>
+                                    <p class="text-sm text-neutral-600 dark:text-neutral-300">456 Earth Avenue, City</p>
+                                    <div class="mt-2 flex items-center text-sm text-neutral-500 dark:text-neutral-400">
+                                        <span class="mr-2">Open: 8AM - 5PM</span>
+                                        <span class="px-2 py-1 text-xs bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100 rounded">Open Now</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-2">
+                        <div class="h-[600px] bg-neutral-200 dark:bg-neutral-700 rounded-lg relative">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-neutral-800 dark:border-neutral-200 mx-auto"></div>
+                                    <p class="mt-4 text-neutral-600 dark:text-neutral-300">Loading map...</p>
+                                </div>
+                            </div>
+                            <!-- Map will be initialized here by JavaScript -->
+                            <div id="map" class="w-full h-full rounded-lg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="2ddaeae1-2547-4d6a-b006-30868a784a7a" data-section-id="2ddaeae1-2547-4d6a-b006-30868a784a7a">
+
+<htmlCode>
+<div id="root">
+    <section id="finished-products" class="py-16 bg-neutral-50 dark:bg-neutral-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">Finished Recycled Products</h2>
+                <p class="text-lg text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">Discover locally available products made from recycled materials, complete with their transformation journey and specifications.</p>
+            </div>
+
+            <div class="mb-8">
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <button class="px-6 py-2 rounded-full bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-200 hover:bg-blue-500 hover:text-white transition-colors">All Products</button>
+                    <button class="px-6 py-2 rounded-full bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-200 hover:bg-blue-500 hover:text-white transition-colors">Furniture</button>
+                    <button class="px-6 py-2 rounded-full bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-200 hover:bg-blue-500 hover:text-white transition-colors">Home Decor</button>
+                    <button class="px-6 py-2 rounded-full bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-200 hover:bg-blue-500 hover:text-white transition-colors">Construction</button>
+                    <button class="px-6 py-2 rounded-full bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-200 hover:bg-blue-500 hover:text-white transition-colors">Packaging</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg overflow-hidden group">
+                    <div class="aspect-w-16 aspect-h-12 bg-neutral-200 dark:bg-neutral-700">
+                        <div class="w-full h-full flex items-center justify-center text-neutral-500 dark:text-neutral-400">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-semibold text-neutral-800 dark:text-neutral-100">Recycled Plastic Furniture</h3>
+                                <p class="text-neutral-600 dark:text-neutral-300 text-sm">Made from recycled HDPE</p>
+                            </div>
+                            <span class="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100 px-3 py-1 rounded-full text-sm">In Stock</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-medium text-neutral-700 dark:text-neutral-200 mb-2">Specifications</h4>
+                                <ul class="text-sm text-neutral-600 dark:text-neutral-400 space-y-1">
+                                    <li>• Material: 100% Recycled HDPE</li>
+                                    <li>• Weight Capacity: 300kg</li>
+                                    <li>• UV Resistant</li>
+                                    <li>• Weather Proof</li>
+                                </ul>
+                            </div>
+                            <div class="pt-4 border-t border-neutral-200 dark:border-neutral-700">
+                                <h4 class="font-medium text-neutral-700 dark:text-neutral-200 mb-2">Recycling Journey</h4>
+                                <p class="text-sm text-neutral-600 dark:text-neutral-400">Transformed from post-consumer plastic waste collected from local communities.</p>
+                            </div>
+                        </div>
+                        <button class="mt-6 w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg transition-colors">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg overflow-hidden group">
+                    <div class="aspect-w-16 aspect-h-12 bg-neutral-200 dark:bg-neutral-700">
+                        <div class="w-full h-full flex items-center justify-center text-neutral-500 dark:text-neutral-400">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-semibold text-neutral-800 dark:text-neutral-100">Recycled Glass Decor</h3>
+                                <p class="text-neutral-600 dark:text-neutral-300 text-sm">Artisanal glass products</p>
+                            </div>
+                            <span class="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-100 px-3 py-1 rounded-full text-sm">Limited</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-medium text-neutral-700 dark:text-neutral-200 mb-2">Specifications</h4>
+                                <ul class="text-sm text-neutral-600 dark:text-neutral-400 space-y-1">
+                                    <li>• Material: Recycled Glass</li>
+                                    <li>• Handcrafted</li>
+                                    <li>• Food Safe</li>
+                                    <li>• Dishwasher Safe</li>
+                                </ul>
+                            </div>
+                            <div class="pt-4 border-t border-neutral-200 dark:border-neutral-700">
+                                <h4 class="font-medium text-neutral-700 dark:text-neutral-200 mb-2">Recycling Journey</h4>
+                                <p class="text-sm text-neutral-600 dark:text-neutral-400">Created from recycled glass bottles and windows, transformed by local artisans.</p>
+                            </div>
+                        </div>
+                        <button class="mt-6 w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg transition-colors">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg overflow-hidden group">
+                    <div class="aspect-w-16 aspect-h-12 bg-neutral-200 dark:bg-neutral-700">
+                        <div class="w-full h-full flex items-center justify-center text-neutral-500 dark:text-neutral-400">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-semibold text-neutral-800 dark:text-neutral-100">Construction Materials</h3>
+                                <p class="text-neutral-600 dark:text-neutral-300 text-sm">Recycled composite blocks</p>
+                            </div>
+                            <span class="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100 px-3 py-1 rounded-full text-sm">In Stock</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-medium text-neutral-700 dark:text-neutral-200 mb-2">Specifications</h4>
+                                <ul class="text-sm text-neutral-600 dark:text-neutral-400 space-y-1">
+                                    <li>• Material: Mixed Recyclables</li>
+                                    <li>• Compression Strength: 7.5 MPa</li>
+                                    <li>• Water Resistant</li>
+                                    <li>• Fire Rated</li>
+                                </ul>
+                            </div>
+                            <div class="pt-4 border-t border-neutral-200 dark:border-neutral-700">
+                                <h4 class="font-medium text-neutral-700 dark:text-neutral-200 mb-2">Recycling Journey</h4>
+                                <p class="text-sm text-neutral-600 dark:text-neutral-400">Manufactured from mixed recyclable materials including plastic and construction waste.</p>
+                            </div>
+                        </div>
+                        <button class="mt-6 w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg transition-colors">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <button class="px-8 py-3 bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-200 rounded-lg hover:bg-blue-500 hover:text-white transition-colors">
+                    Load More Products
+                </button>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="7660c62d-71b3-4220-beeb-4b29fc64d3c5" data-section-id="7660c62d-71b3-4220-beeb-4b29fc64d3c5">
+
+<htmlCode>
+<div id="root">
+    <section id="search-interface" class="py-16 bg-neutral-50 dark:bg-neutral-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">Search Materials & Products</h2>
+                    <p class="text-lg text-neutral-600 dark:text-neutral-300">Find available materials and recycled products with detailed specifications</p>
+                </div>
+
+                <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-6">
+                    <div class="flex flex-col space-y-4">
+                        <div class="relative">
+                            <input type="text" placeholder="Search for materials or products..." class="w-full px-6 py-4 text-lg border border-neutral-300 dark:border-neutral-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-neutral-700 dark:text-neutral-100">
+                            <button class="absolute right-4 top-1/2 transform -translate-y-1/2 text-neutral-500 dark:text-neutral-400 hover:text-blue-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <select class="px-4 py-3 border border-neutral-300 dark:border-neutral-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-neutral-700 dark:text-neutral-100">
+                                <option value="">Material Type</option>
+                                <option value="plastic">Plastics</option>
+                                <option value="metal">Metals</option>
+                                <option value="paper">Paper</option>
+                                <option value="glass">Glass</option>
+                                <option value="textile">Textiles</option>
+                            </select>
+
+                            <select class="px-4 py-3 border border-neutral-300 dark:border-neutral-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-neutral-700 dark:text-neutral-100">
+                                <option value="">Grade/Quality</option>
+                                <option value="premium">Premium</option>
+                                <option value="standard">Standard</option>
+                                <option value="economy">Economy</option>
+                            </select>
+
+                            <select class="px-4 py-3 border border-neutral-300 dark:border-neutral-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-neutral-700 dark:text-neutral-100">
+                                <option value="">Location</option>
+                                <option value="local">Local Only</option>
+                                <option value="national">National</option>
+                                <option value="international">International</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h3 class="text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4">Search Results</h3>
+                        
+                        <div class="space-y-4">
+                            <!-- Result Card 1 -->
+                            <div class="bg-neutral-100 dark:bg-neutral-700 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h4 class="text-lg font-medium text-neutral-800 dark:text-neutral-100">HDPE Recycled Plastic Pellets</h4>
+                                        <p class="text-neutral-600 dark:text-neutral-300 text-sm mt-1">High-quality recycled HDPE pellets suitable for injection molding</p>
+                                        <div class="mt-2 flex items-center gap-4">
+                                            <span class="text-sm text-neutral-500 dark:text-neutral-400">Grade: Premium</span>
+                                            <span class="text-sm text-neutral-500 dark:text-neutral-400">Available Locally</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="flex items-center">
+                                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <span class="ml-1 text-sm text-neutral-600 dark:text-neutral-300">4.5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Result Card 2 -->
+                            <div class="bg-neutral-100 dark:bg-neutral-700 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h4 class="text-lg font-medium text-neutral-800 dark:text-neutral-100">Recycled Paper Pulp</h4>
+                                        <p class="text-neutral-600 dark:text-neutral-300 text-sm mt-1">Mixed paper pulp suitable for packaging materials</p>
+                                        <div class="mt-2 flex items-center gap-4">
+                                            <span class="text-sm text-neutral-500 dark:text-neutral-400">Grade: Standard</span>
+                                            <span class="text-sm text-neutral-500 dark:text-neutral-400">National Distribution</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="flex items-center">
+                                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <span class="ml-1 text-sm text-neutral-600 dark:text-neutral-300">4.2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 text-center">
+                            <button class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+                                Load More Results
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="d2b12ce5-4e9f-4515-9f60-4cdbde7c1da4" data-section-id="d2b12ce5-4e9f-4515-9f60-4cdbde7c1da4">
+
+
+                <htmlcode id="el-qx0wzfk1">
+<div id="root">
+    <footer id="footer" class="bg-neutral-900 text-neutral-300">
+        <div class="container mx-auto px-4" id="el-07fawmu0">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-16 pb-8" id="el-k2av4g7q">
+                <!-- Company Info -->
+                <div class="space-y-4" id="el-s2br1pz5">
+                    <h3 class="text-xl font-bold text-white" id="el-a2ubhs35">Rebound</h3>
+                    <p class="text-sm" id="el-4ncntcbu">Connecting businesses in the circular economy, making recycling and sustainable materials accessible worldwide.</p>
+                    <div class="flex space-x-4" id="el-913e1f3u">
+                        <a href="#" class="hover:text-blue-500 transition-colors" id="el-ncwt2oxi">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" id="el-bo3essy6">
+                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" id="el-i5dighzn"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="hover:text-blue-500 transition-colors" id="el-hy9y426r">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" id="el-zslj2ovi">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" id="el-chkvtgny"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="hover:text-blue-500 transition-colors" id="el-tdw8vqhp">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" id="el-tdwu18bs">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" id="el-lzjyiual"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="hover:text-blue-500 transition-colors" id="el-i8qrpix2">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" id="el-c82wtktj">
+                                <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" id="el-g0y4pvqw"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div id="el-ip69ycex">
+                    <h3 class="text-lg font-semibold text-white mb-4" id="el-76d3ixuy">Quick Links</h3>
+                    <ul class="space-y-2" id="el-g9wjoxvn">
+                        <li id="el-2hyikcc5"><a href="#" class="hover:text-blue-500 transition-colors" id="el-f1qwc6eg">Raw Materials</a></li>
+                        <li id="el-pmkidlny"><a href="#" class="hover:text-blue-500 transition-colors" id="el-jx0l8auy">Price Index</a></li>
+                        <li id="el-xutnazkh"><a href="#" class="hover:text-blue-500 transition-colors" id="el-iw87cusg">Inventory Management</a></li>
+                        <li id="el-mugutj8q"><a href="#" class="hover:text-blue-500 transition-colors" id="el-cdrk35t0">Service Providers</a></li>
+                        <li id="el-o98ct8sy"><a href="#" class="hover:text-blue-500 transition-colors" id="el-u04jk9et">Knowledge Base</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div id="el-rp6kb686">
+                    <h3 class="text-lg font-semibold text-white mb-4" id="el-dey1sfyg">Resources</h3>
+                    <ul class="space-y-2" id="el-cg47zioa">
+                        <li id="el-0g4znkic"><a href="#" class="hover:text-blue-500 transition-colors" id="el-ue4e1lla">Latest News</a></li>
+                        <li id="el-tgiq9tb6"><a href="#" class="hover:text-blue-500 transition-colors" id="el-ng8mbr1a">Recycling Centers</a></li>
+                        <li id="el-dns1fdm2"><a href="#" class="hover:text-blue-500 transition-colors" id="el-c10kbpeo">Finished Products</a></li>
+                        <li id="el-xbwhs7dc"><a href="#" class="hover:text-blue-500 transition-colors" id="el-z774gsly">Case Studies</a></li>
+                        <li id="el-ul2me0c0"><a href="#" class="hover:text-blue-500 transition-colors" id="el-q59rdfkg">Industry Updates</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div id="el-pgvfzau4">
+                    <h3 class="text-lg font-semibold text-white mb-4" id="el-fdeuljfz">Contact Us</h3>
+                    <ul class="space-y-2" id="el-syig1i7l">
+                        <li class="flex items-center" id="el-72a0jjsu">
+    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="el-zxch9ckg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" id="el-iodqfbv7"></path>
+    </svg>
+    support@rebound.ae
+</li>
+                        <li class="flex items-center" id="el-txrzggfe">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="el-94bkwmdt">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" id="el-q15950cr"></path>
+                            </svg>
+                            +1 (555) 123-4567
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-neutral-800 py-8 mt-8" id="el-gg96u6uo">
+                <div class="flex flex-col md:flex-row justify-between items-center" id="el-66w7pm28">
+                    <p class="text-sm" id="el-btp4axqo">© 2024 RecycleMarket B2B. All rights reserved.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0" id="el-nrmpvxwc">
+                        <a href="#" class="text-sm hover:text-blue-500 transition-colors" id="el-2zby0tp4">Privacy Policy</a>
+                        <a href="#" class="text-sm hover:text-blue-500 transition-colors" id="el-uzdzquwn">Terms of Service</a>
+                        <a href="#" class="text-sm hover:text-blue-500 transition-colors" id="el-c0ao2en2">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</htmlcode>
+              </element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
