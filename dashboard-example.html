@@ -1,0 +1,1841 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+       <title>{{project.seoTitle}}</title>
+      <!-- SEO Description -->
+      <meta name="description" content="{{project.seoDescription}}">
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- {headerScripts} -->
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="keywords" content="{{project.meta.keywords}}">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      <meta name="google-site-verification" content="{{project.meta.googleVerification}}">
+      <meta name="baidu-verification" content="{{project.meta.baiduVerification}}">
+      <meta name="yandex-verification" content="{{project.meta.yandexVerification}}">
+      <meta name="bing-verification" content="{{project.meta.bingVerification}}">
+      <meta property="og:title" content="{{project.meta.ogTitle}}">
+      <meta property="og:description" content="{{project.meta.ogDescription}}">
+      <meta property="og:image" content="{{project.meta.ogImage}}">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="{{project.name}}">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="{{project.meta.ogTitle}}">
+      <meta name="twitter:description" content="{{project.meta.ogDescription}}">
+      <meta name="twitter:image" content="{{project.meta.ogImage}}">
+
+      <!-- Base Styles -->
+      <style>
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="7acec9ce-3148-4d3d-93a1-0282d8dcfdce" data-section-id="7acec9ce-3148-4d3d-93a1-0282d8dcfdce">
+
+<htmlCode>
+<div id="root" class="bg-gray-100">
+    <div class="flex">
+        <!-- Sidebar Navigation -->
+        <nav class="fixed h-screen w-64 bg-white border-r border-gray-200 hidden lg:block">
+            <div class="flex flex-col h-full">
+                <!-- Logo -->
+                <div class="p-4 border-b border-gray-200">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-emerald-600 rounded-lg"></div>
+                        <span class="text-lg font-semibold">Rebound</span>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="flex-1 overflow-y-auto px-3 py-4">
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#reports" class="flex items-center px-4 py-2 text-gray-700 bg-gray-100 rounded-lg">
+                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                                Reports
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#impact" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                </svg>
+                                Impact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- User Profile -->
+                <div class="p-4 border-t border-gray-200">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 bg-gray-200 rounded-full"></div>
+                        <div class="flex-1">
+                            <p class="text-sm font-medium">Admin User</p>
+                            <p class="text-xs text-gray-500">admin@rebound.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Header -->
+        <div class="lg:hidden fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-10">
+            <div class="flex items-center justify-between p-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-emerald-600 rounded-lg"></div>
+                    <span class="text-lg font-semibold">Rebound</span>
+                </div>
+                <button type="button" class="text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500" id="mobile-menu-button">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 lg:ml-64 overflow-y-auto">
+            <MountPoint>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu functionality
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const nav = document.querySelector('nav');
+
+    mobileMenuButton.addEventListener('click', function() {
+        nav.classList.toggle('hidden');
+    });
+
+    // Active link functionality
+    const links = document.querySelectorAll('nav a');
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            links.forEach(l => l.classList.remove('bg-gray-100'));
+            this.classList.add('bg-gray-100');
+        });
+    });
+
+    // Handle hash navigation
+    function handleHashChange() {
+        const hash = window.location.hash;
+        if (hash) {
+            const target = document.querySelector(hash);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }
+
+    window.addEventListener('hashchange', handleHashChange);
+    if (window.location.hash) {
+        handleHashChange();
+    }
+});
+</script>
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style></element><element id="ba0d408b-56e4-407c-81eb-3ba03928de1c" data-section-id="ba0d408b-56e4-407c-81eb-3ba03928de1c">
+
+<htmlCode>
+<section id="buyer_dashboard" class="p-6 bg-gray-100">
+    <!-- Header -->
+    <div class="mb-8">
+        <h1 class="text-2xl font-bold text-gray-900">Buyer Dashboard</h1>
+        <p class="text-sm text-gray-600">Overview of your marketplace activities and impact</p>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <div class="bg-white p-4 rounded border border-gray-200">
+            <div class="flex justify-between items-center">
+                <h3 class="text-sm font-medium text-gray-500">Total Orders</h3>
+                <span class="text-emerald-500">↑ 12%</span>
+            </div>
+            <p class="text-2xl font-semibold mt-2">1,234</p>
+        </div>
+        <div class="bg-white p-4 rounded border border-gray-200">
+            <div class="flex justify-between items-center">
+                <h3 class="text-sm font-medium text-gray-500">Material Volume</h3>
+                <span class="text-emerald-500">↑ 8%</span>
+            </div>
+            <p class="text-2xl font-semibold mt-2">456 tons</p>
+        </div>
+        <div class="bg-white p-4 rounded border border-gray-200">
+            <div class="flex justify-between items-center">
+                <h3 class="text-sm font-medium text-gray-500">Carbon Saved</h3>
+                <span class="text-emerald-500">↑ 15%</span>
+            </div>
+            <p class="text-2xl font-semibold mt-2">789 kg</p>
+        </div>
+        <div class="bg-white p-4 rounded border border-gray-200">
+            <div class="flex justify-between items-center">
+                <h3 class="text-sm font-medium text-gray-500">Active Orders</h3>
+                <span class="text-amber-500">• Live</span>
+            </div>
+            <p class="text-2xl font-semibold mt-2">12</p>
+        </div>
+    </div>
+
+    <!-- Recent Transactions -->
+    <div class="bg-white rounded border border-gray-200 mb-6">
+        <div class="p-4 border-b border-gray-200">
+            <h2 class="text-lg font-semibold">Recent Transactions</h2>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Order ID</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Material</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Quantity</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Date</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr>
+                        <td class="px-4 py-3 text-sm">#ORD-001</td>
+                        <td class="px-4 py-3 text-sm">Recycled PET</td>
+                        <td class="px-4 py-3 text-sm">5000 kg</td>
+                        <td class="px-4 py-3">
+                            <span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Completed</span>
+                        </td>
+                        <td class="px-4 py-3 text-sm">2024-02-20</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-3 text-sm">#ORD-002</td>
+                        <td class="px-4 py-3 text-sm">Recycled HDPE</td>
+                        <td class="px-4 py-3 text-sm">3000 kg</td>
+                        <td class="px-4 py-3">
+                            <span class="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full">Pending</span>
+                        </td>
+                        <td class="px-4 py-3 text-sm">2024-02-19</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Impact Metrics -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="bg-white rounded border border-gray-200">
+            <div class="p-4 border-b border-gray-200">
+                <h2 class="text-lg font-semibold">Environmental Impact</h2>
+            </div>
+            <div class="p-4">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-600">Carbon Footprint Reduced</span>
+                        <span class="text-sm font-medium">1,200 kg CO2e</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-emerald-500 h-2 rounded-full" style="width: 75%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-600">Plastic Waste Saved</span>
+                        <span class="text-sm font-medium">8,000 kg</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-emerald-500 h-2 rounded-full" style="width: 60%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded border border-gray-200">
+            <div class="p-4 border-b border-gray-200">
+                <h2 class="text-lg font-semibold">Material Distribution</h2>
+            </div>
+            <div class="p-4">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-600">Recycled PET</span>
+                        <span class="text-sm font-medium">45%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-blue-500 h-2 rounded-full" style="width: 45%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-600">Recycled HDPE</span>
+                        <span class="text-sm font-medium">30%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-purple-500 h-2 rounded-full" style="width: 30%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-600">Other Materials</span>
+                        <span class="text-sm font-medium">25%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-gray-500 h-2 rounded-full" style="width: 25%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="ba1adb7a-6a7f-4c18-9e2d-4993af7631e8" data-section-id="ba1adb7a-6a7f-4c18-9e2d-4993af7631e8">
+
+<htmlCode>
+<section id="seller_dashboard" class="p-6 bg-gray-100">
+    <!-- Header -->
+    <div class="mb-8">
+        <h1 class="text-2xl font-bold text-gray-900">Seller Dashboard</h1>
+        <p class="text-sm text-gray-600">Monitor your sales and material listings</p>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <div class="bg-white p-4 rounded border border-gray-200">
+            <div class="flex justify-between items-center">
+                <h3 class="text-sm font-medium text-gray-500">Total Sales</h3>
+                <span class="text-emerald-500">↑ 15%</span>
+            </div>
+            <p class="text-2xl font-semibold mt-2">₹2.4M</p>
+        </div>
+        <div class="bg-white p-4 rounded border border-gray-200">
+            <div class="flex justify-between items-center">
+                <h3 class="text-sm font-medium text-gray-500">Active Listings</h3>
+                <span class="text-emerald-500">↑ 5</span>
+            </div>
+            <p class="text-2xl font-semibold mt-2">23</p>
+        </div>
+        <div class="bg-white p-4 rounded border border-gray-200">
+            <div class="flex justify-between items-center">
+                <h3 class="text-sm font-medium text-gray-500">Material Sold</h3>
+                <span class="text-emerald-500">↑ 20%</span>
+            </div>
+            <p class="text-2xl font-semibold mt-2">892 tons</p>
+        </div>
+        <div class="bg-white p-4 rounded border border-gray-200">
+            <div class="flex justify-between items-center">
+                <h3 class="text-sm font-medium text-gray-500">Credit Score</h3>
+                <span class="text-emerald-500">A+</span>
+            </div>
+            <p class="text-2xl font-semibold mt-2">95%</p>
+        </div>
+    </div>
+
+    <!-- Active Listings -->
+    <div class="bg-white rounded border border-gray-200 mb-6">
+        <div class="p-4 border-b border-gray-200 flex justify-between items-center">
+            <h2 class="text-lg font-semibold">Active Listings</h2>
+            <button class="px-4 py-2 bg-emerald-600 text-white rounded hover:bg-emerald-700">
+                Add New Listing
+            </button>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Material</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Quantity</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Price/Ton</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr>
+                        <td class="px-4 py-3">
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
+                                <span class="text-sm">Recycled PET Flakes</span>
+                            </div>
+                        </td>
+                        <td class="px-4 py-3 text-sm">10,000 kg</td>
+                        <td class="px-4 py-3 text-sm">₹45,000</td>
+                        <td class="px-4 py-3">
+                            <span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Active</span>
+                        </td>
+                        <td class="px-4 py-3">
+                            <button class="text-blue-600 hover:text-blue-800 text-sm">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-3">
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                                <span class="text-sm">HDPE Granules</span>
+                            </div>
+                        </td>
+                        <td class="px-4 py-3 text-sm">5,000 kg</td>
+                        <td class="px-4 py-3 text-sm">₹52,000</td>
+                        <td class="px-4 py-3">
+                            <span class="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full">Pending</span>
+                        </td>
+                        <td class="px-4 py-3">
+                            <button class="text-blue-600 hover:text-blue-800 text-sm">Edit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Two Column Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Recent Orders -->
+        <div class="bg-white rounded border border-gray-200">
+            <div class="p-4 border-b border-gray-200">
+                <h2 class="text-lg font-semibold">Recent Orders</h2>
+            </div>
+            <div class="p-4">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center p-3 bg-gray-50 rounded">
+                        <div>
+                            <p class="font-medium">Order #1234</p>
+                            <p class="text-sm text-gray-600">5,000 kg PET Flakes</p>
+                        </div>
+                        <span class="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">Processing</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3 bg-gray-50 rounded">
+                        <div>
+                            <p class="font-medium">Order #1233</p>
+                            <p class="text-sm text-gray-600">3,000 kg HDPE</p>
+                        </div>
+                        <span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Shipped</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Environmental Impact -->
+        <div class="bg-white rounded border border-gray-200">
+            <div class="p-4 border-b border-gray-200">
+                <h2 class="text-lg font-semibold">Environmental Impact</h2>
+            </div>
+            <div class="p-4">
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-sm text-gray-600">Carbon Credits Earned</span>
+                            <span class="text-sm font-medium">450 Credits</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-emerald-500 h-2 rounded-full" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-sm text-gray-600">Plastic Credits</span>
+                            <span class="text-sm font-medium">280 Credits</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-sm text-gray-600">Energy Saved</span>
+                            <span class="text-sm font-medium">12,450 kWh</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-purple-500 h-2 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="604b63ce-cffb-4b5a-8362-afbb4550aa2c" data-section-id="604b63ce-cffb-4b5a-8362-afbb4550aa2c">
+
+<htmlCode>
+<section id="admin_dashboard" class="p-6 bg-gray-100">
+    <!-- Header -->
+    <div class="mb-8">
+        <h1 class="text-2xl font-bold text-gray-900">Admin Dashboard</h1>
+        <p class="text-sm text-gray-600">Platform Overview and Management</p>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <div class="bg-white p-4 rounded border border-gray-200">
+            <div class="flex justify-between items-center">
+                <h3 class="text-sm font-medium text-gray-500">Total Users</h3>
+                <span class="text-emerald-500">↑ 25%</span>
+            </div>
+            <p class="text-2xl font-semibold mt-2">3,456</p>
+            <div class="flex justify-between text-sm mt-2">
+                <span class="text-gray-500">Buyers: 2,123</span>
+                <span class="text-gray-500">Sellers: 1,333</span>
+            </div>
+        </div>
+        <div class="bg-white p-4 rounded border border-gray-200">
+            <div class="flex justify-between items-center">
+                <h3 class="text-sm font-medium text-gray-500">Total Transactions</h3>
+                <span class="text-emerald-500">↑ 18%</span>
+            </div>
+            <p class="text-2xl font-semibold mt-2">₹12.5M</p>
+            <p class="text-sm text-gray-500 mt-2">Last 30 days</p>
+        </div>
+        <div class="bg-white p-4 rounded border border-gray-200">
+            <div class="flex justify-between items-center">
+                <h3 class="text-sm font-medium text-gray-500">Active Listings</h3>
+                <span class="text-emerald-500">↑ 12%</span>
+            </div>
+            <p class="text-2xl font-semibold mt-2">892</p>
+            <p class="text-sm text-gray-500 mt-2">Across 15 categories</p>
+        </div>
+        <div class="bg-white p-4 rounded border border-gray-200">
+            <div class="flex justify-between items-center">
+                <h3 class="text-sm font-medium text-gray-500">Platform Health</h3>
+                <span class="text-emerald-500">98.9%</span>
+            </div>
+            <p class="text-2xl font-semibold mt-2">Excellent</p>
+            <p class="text-sm text-gray-500 mt-2">All systems operational</p>
+        </div>
+    </div>
+
+    <!-- Recent Activity & Alerts -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        <div class="bg-white rounded border border-gray-200">
+            <div class="p-4 border-b border-gray-200 flex justify-between items-center">
+                <h2 class="text-lg font-semibold">Recent Activity</h2>
+                <button class="text-sm text-blue-600 hover:text-blue-800">View All</button>
+            </div>
+            <div class="p-4">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                        <div class="flex-1">
+                            <p class="text-sm">New seller registration: <span class="font-medium">Green Recyclers Ltd</span></p>
+                            <p class="text-xs text-gray-500">2 minutes ago</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <div class="flex-1">
+                            <p class="text-sm">Large transaction completed: <span class="font-medium">₹2.5M</span></p>
+                            <p class="text-xs text-gray-500">15 minutes ago</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                        <div class="flex-1">
+                            <p class="text-sm">New dispute filed: <span class="font-medium">#DSP-123</span></p>
+                            <p class="text-xs text-gray-500">1 hour ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded border border-gray-200">
+            <div class="p-4 border-b border-gray-200">
+                <h2 class="text-lg font-semibold">System Alerts</h2>
+            </div>
+            <div class="p-4">
+                <div class="space-y-4">
+                    <div class="p-3 bg-yellow-50 border border-yellow-200 rounded">
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 text-yellow-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                            </svg>
+                            <p class="text-sm text-yellow-800">High transaction volume detected</p>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-green-50 border border-green-200 rounded">
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-sm text-green-800">Monthly reports generated successfully</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Platform Metrics -->
+    <div class="bg-white rounded border border-gray-200 mb-6">
+        <div class="p-4 border-b border-gray-200">
+            <h2 class="text-lg font-semibold">Platform Metrics</h2>
+        </div>
+        <div class="p-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="space-y-2">
+                    <div class="flex justify-between">
+                        <span class="text-sm text-gray-600">User Growth</span>
+                        <span class="text-sm font-medium">+25%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-emerald-500 h-2 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex justify-between">
+                        <span class="text-sm text-gray-600">Transaction Success</span>
+                        <span class="text-sm font-medium">98%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-blue-500 h-2 rounded-full" style="width: 98%"></div>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex justify-between">
+                        <span class="text-sm text-gray-600">Dispute Resolution</span>
+                        <span class="text-sm font-medium">95%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-purple-500 h-2 rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <button class="p-4 bg-white rounded border border-gray-200 hover:border-emerald-500 transition-colors">
+            <div class="text-center">
+                <svg class="w-6 h-6 mx-auto text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                <span class="block mt-2 text-sm font-medium">Add User</span>
+            </div>
+        </button>
+        <button class="p-4 bg-white rounded border border-gray-200 hover:border-emerald-500 transition-colors">
+            <div class="text-center">
+                <svg class="w-6 h-6 mx-auto text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                <span class="block mt-2 text-sm font-medium">Generate Report</span>
+            </div>
+        </button>
+        <button class="p-4 bg-white rounded border border-gray-200 hover:border-emerald-500 transition-colors">
+            <div class="text-center">
+                <svg class="w-6 h-6 mx-auto text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                </svg>
+                <span class="block mt-2 text-sm font-medium">Approve Listings</span>
+            </div>
+        </button>
+        <button class="p-4 bg-white rounded border border-gray-200 hover:border-emerald-500 transition-colors">
+            <div class="text-center">
+                <svg class="w-6 h-6 mx-auto text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <span class="block mt-2 text-sm font-medium">Settings</span>
+            </div>
+        </button>
+    </div>
+</section>
+</htmlCode></element><element id="55e79751-0c60-4e89-b575-fff8912f1b7f" data-section-id="55e79751-0c60-4e89-b575-fff8912f1b7f">
+
+<htmlCode>
+<section id="transaction_reports" class="p-6 bg-gray-100">
+    <!-- Header with Export Options -->
+    <div class="mb-8 flex justify-between items-center">
+        <div>
+            <h1 class="text-2xl font-bold text-gray-900">Transaction Reports</h1>
+            <p class="text-sm text-gray-600">Comprehensive transaction history and analytics</p>
+        </div>
+        <div class="flex space-x-3">
+            <button class="flex items-center px-4 py-2 bg-white border border-gray-200 rounded hover:bg-gray-50">
+                <svg class="w-4 h-4 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                Export PDF
+            </button>
+            <button class="flex items-center px-4 py-2 bg-white border border-gray-200 rounded hover:bg-gray-50">
+                <svg class="w-4 h-4 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                Export Excel
+            </button>
+        </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="bg-white p-4 rounded border border-gray-200 mb-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Date Range</label>
+                <select class="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:border-emerald-500">
+                    <option>Last 30 days</option>
+                    <option>Last 90 days</option>
+                    <option>Last 6 months</option>
+                    <option>Custom Range</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Transaction Type</label>
+                <select class="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:border-emerald-500">
+                    <option>All Types</option>
+                    <option>Purchase</option>
+                    <option>Sale</option>
+                    <option>Refund</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Status</label>
+                <select class="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:border-emerald-500">
+                    <option>All Status</option>
+                    <option>Completed</option>
+                    <option>Pending</option>
+                    <option>Failed</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">User Type</label>
+                <select class="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:border-emerald-500">
+                    <option>All Users</option>
+                    <option>Individual</option>
+                    <option>Business</option>
+                    <option>Admin</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Transaction Summary -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div class="bg-white p-4 rounded border border-gray-200">
+            <h3 class="text-sm font-medium text-gray-500">Total Transactions</h3>
+            <p class="text-2xl font-semibold mt-2">₹12,345,678</p>
+            <div class="mt-2 flex items-center text-sm">
+                <span class="text-emerald-500">↑ 12%</span>
+                <span class="text-gray-500 ml-2">vs last period</span>
+            </div>
+        </div>
+        <div class="bg-white p-4 rounded border border-gray-200">
+            <h3 class="text-sm font-medium text-gray-500">Average Transaction Value</h3>
+            <p class="text-2xl font-semibold mt-2">₹45,678</p>
+            <div class="mt-2 flex items-center text-sm">
+                <span class="text-emerald-500">↑ 8%</span>
+                <span class="text-gray-500 ml-2">vs last period</span>
+            </div>
+        </div>
+        <div class="bg-white p-4 rounded border border-gray-200">
+            <h3 class="text-sm font-medium text-gray-500">Success Rate</h3>
+            <p class="text-2xl font-semibold mt-2">98.5%</p>
+            <div class="mt-2 flex items-center text-sm">
+                <span class="text-emerald-500">↑ 2%</span>
+                <span class="text-gray-500 ml-2">vs last period</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detailed Transaction Table -->
+    <div class="bg-white rounded border border-gray-200">
+        <div class="p-4 border-b border-gray-200">
+            <h2 class="text-lg font-semibold">Transaction Details</h2>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Transaction ID</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr>
+                        <td class="px-4 py-3 text-sm">#TRX-001</td>
+                        <td class="px-4 py-3 text-sm">2024-02-20</td>
+                        <td class="px-4 py-3 text-sm">Green Corp Ltd</td>
+                        <td class="px-4 py-3 text-sm">Purchase</td>
+                        <td class="px-4 py-3 text-sm">₹250,000</td>
+                        <td class="px-4 py-3">
+                            <span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Completed</span>
+                        </td>
+                        <td class="px-4 py-3">
+                            <button class="text-blue-600 hover:text-blue-800 text-sm">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-3 text-sm">#TRX-002</td>
+                        <td class="px-4 py-3 text-sm">2024-02-19</td>
+                        <td class="px-4 py-3 text-sm">Eco Solutions</td>
+                        <td class="px-4 py-3 text-sm">Sale</td>
+                        <td class="px-4 py-3 text-sm">₹180,000</td>
+                        <td class="px-4 py-3">
+                            <span class="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full">Pending</span>
+                        </td>
+                        <td class="px-4 py-3">
+                            <button class="text-blue-600 hover:text-blue-800 text-sm">View Details</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="px-4 py-3 border-t border-gray-200">
+            <div class="flex justify-between items-center">
+                <div class="text-sm text-gray-600">
+                    Showing 1 to 10 of 50 entries
+                </div>
+                <div class="flex space-x-2">
+                    <button class="px-3 py-1 border border-gray-200 rounded hover:bg-gray-50">Previous</button>
+                    <button class="px-3 py-1 border border-gray-200 rounded bg-emerald-500 text-white">1</button>
+                    <button class="px-3 py-1 border border-gray-200 rounded hover:bg-gray-50">2</button>
+                    <button class="px-3 py-1 border border-gray-200 rounded hover:bg-gray-50">3</button>
+                    <button class="px-3 py-1 border border-gray-200 rounded hover:bg-gray-50">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="7f58ca01-f419-4c56-aa9b-f0b18995bd89" data-section-id="7f58ca01-f419-4c56-aa9b-f0b18995bd89">
+
+<htmlCode>
+<section id="impact_metrics" class="p-6 bg-gray-100">
+    <!-- Header -->
+    <div class="mb-8">
+        <h1 class="text-2xl font-bold text-gray-900">Environmental Impact Metrics</h1>
+        <p class="text-sm text-gray-600">Track and analyze your environmental contributions</p>
+    </div>
+
+    <!-- Overall Impact Stats -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div class="bg-white p-6 rounded border border-gray-200">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-sm font-medium text-gray-500">Carbon Saved</p>
+                    <h3 class="text-2xl font-bold mt-2">2,450</h3>
+                    <p class="text-sm text-gray-600">Metric Tons CO₂</p>
+                </div>
+                <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+                    <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="mt-4 flex items-center text-sm">
+                <span class="text-emerald-500">↑ 15%</span>
+                <span class="text-gray-500 ml-2">vs last month</span>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded border border-gray-200">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-sm font-medium text-gray-500">Energy Saved</p>
+                    <h3 class="text-2xl font-bold mt-2">128,750</h3>
+                    <p class="text-sm text-gray-600">kWh</p>
+                </div>
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="mt-4 flex items-center text-sm">
+                <span class="text-emerald-500">↑ 12%</span>
+                <span class="text-gray-500 ml-2">vs last month</span>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded border border-gray-200">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-sm font-medium text-gray-500">Plastic Saved</p>
+                    <h3 class="text-2xl font-bold mt-2">892</h3>
+                    <p class="text-sm text-gray-600">Metric Tons</p>
+                </div>
+                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="mt-4 flex items-center text-sm">
+                <span class="text-emerald-500">↑ 18%</span>
+                <span class="text-gray-500 ml-2">vs last month</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Credits Overview -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        <div class="bg-white rounded border border-gray-200">
+            <div class="p-4 border-b border-gray-200">
+                <h2 class="text-lg font-semibold">Carbon Credits</h2>
+            </div>
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-8">
+                    <div>
+                        <p class="text-3xl font-bold">458</p>
+                        <p class="text-sm text-gray-500">Total Credits Earned</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-lg font-semibold text-emerald-600">+45</p>
+                        <p class="text-sm text-gray-500">This Month</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Earned Credits</span>
+                            <span class="font-medium">75%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-emerald-500 h-2 rounded-full" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Used Credits</span>
+                            <span class="font-medium">25%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full" style="width: 25%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded border border-gray-200">
+            <div class="p-4 border-b border-gray-200">
+                <h2 class="text-lg font-semibold">Plastic Credits</h2>
+            </div>
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-8">
+                    <div>
+                        <p class="text-3xl font-bold">283</p>
+                        <p class="text-sm text-gray-500">Total Credits Earned</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-lg font-semibold text-emerald-600">+28</p>
+                        <p class="text-sm text-gray-500">This Month</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Earned Credits</span>
+                            <span class="font-medium">60%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-purple-500 h-2 rounded-full" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Used Credits</span>
+                            <span class="font-medium">40%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-indigo-500 h-2 rounded-full" style="width: 40%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Monthly Impact Breakdown -->
+    <div class="bg-white rounded border border-gray-200">
+        <div class="p-4 border-b border-gray-200">
+            <h2 class="text-lg font-semibold">Monthly Impact Breakdown</h2>
+        </div>
+        <div class="p-4">
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Month</th>
+                            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Carbon Saved</th>
+                            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Energy Saved</th>
+                            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Plastic Saved</th>
+                            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Credits Earned</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-4 py-3 text-sm">February 2024</td>
+                            <td class="px-4 py-3 text-sm">250 MT</td>
+                            <td class="px-4 py-3 text-sm">12,500 kWh</td>
+                            <td class="px-4 py-3 text-sm">85 MT</td>
+                            <td class="px-4 py-3 text-sm">45</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 text-sm">January 2024</td>
+                            <td class="px-4 py-3 text-sm">220 MT</td>
+                            <td class="px-4 py-3 text-sm">11,800 kWh</td>
+                            <td class="px-4 py-3 text-sm">78 MT</td>
+                            <td class="px-4 py-3 text-sm">38</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="009025c0-463f-4011-a981-5be08f969057" data-section-id="009025c0-463f-4011-a981-5be08f969057">
+
+<htmlCode>
+<section id="carbon_credits" class="p-6 bg-gray-100">
+    <!-- Header -->
+    <div class="mb-8 flex justify-between items-center">
+        <div>
+            <h1 class="text-2xl font-bold text-gray-900">Carbon Credits Management</h1>
+            <p class="text-sm text-gray-600">Track and manage your carbon credit portfolio</p>
+        </div>
+        <button class="px-4 py-2 bg-emerald-600 text-white rounded hover:bg-emerald-700 flex items-center">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+            </svg>
+            Trade Credits
+        </button>
+    </div>
+
+    <!-- Credit Balance Overview -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div class="bg-white p-6 rounded border border-gray-200">
+            <h3 class="text-sm font-medium text-gray-500">Available Credits</h3>
+            <div class="mt-2 flex items-center">
+                <span class="text-3xl font-bold">458</span>
+                <span class="ml-2 px-2 py-1 text-xs bg-emerald-100 text-emerald-800 rounded-full">Active</span>
+            </div>
+            <p class="mt-2 text-sm text-gray-600">Market Value: ₹915,000</p>
+        </div>
+
+        <div class="bg-white p-6 rounded border border-gray-200">
+            <h3 class="text-sm font-medium text-gray-500">Pending Credits</h3>
+            <div class="mt-2 flex items-center">
+                <span class="text-3xl font-bold">125</span>
+                <span class="ml-2 px-2 py-1 text-xs bg-yellow-100 text-yellow-800 rounded-full">Processing</span>
+            </div>
+            <p class="mt-2 text-sm text-gray-600">Expected Value: ₹250,000</p>
+        </div>
+
+        <div class="bg-white p-6 rounded border border-gray-200">
+            <h3 class="text-sm font-medium text-gray-500">Total Retired Credits</h3>
+            <div class="mt-2 flex items-center">
+                <span class="text-3xl font-bold">892</span>
+                <span class="ml-2 px-2 py-1 text-xs bg-gray-100 text-gray-800 rounded-full">Retired</span>
+            </div>
+            <p class="mt-2 text-sm text-gray-600">Historical Value: ₹1,784,000</p>
+        </div>
+    </div>
+
+    <!-- Credit Generation Analytics -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        <div class="bg-white rounded border border-gray-200">
+            <div class="p-4 border-b border-gray-200">
+                <h2 class="text-lg font-semibold">Credit Generation Sources</h2>
+            </div>
+            <div class="p-6">
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Recycled Materials</span>
+                            <span class="font-medium">65%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-emerald-500 h-2 rounded-full" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Energy Efficiency</span>
+                            <span class="font-medium">25%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full" style="width: 25%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Process Optimization</span>
+                            <span class="font-medium">10%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-purple-500 h-2 rounded-full" style="width: 10%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded border border-gray-200">
+            <div class="p-4 border-b border-gray-200">
+                <h2 class="text-lg font-semibold">Credit Utilization</h2>
+            </div>
+            <div class="p-6">
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Available for Trading</span>
+                            <span class="font-medium">458 Credits</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-emerald-500 h-2 rounded-full" style="width: 45%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Reserved for Compliance</span>
+                            <span class="font-medium">200 Credits</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-yellow-500 h-2 rounded-full" style="width: 20%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Transactions -->
+    <div class="bg-white rounded border border-gray-200">
+        <div class="p-4 border-b border-gray-200">
+            <h2 class="text-lg font-semibold">Recent Credit Transactions</h2>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Transaction ID</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Date</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Type</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Credits</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Value</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr>
+                        <td class="px-4 py-3 text-sm">#CC-001</td>
+                        <td class="px-4 py-3 text-sm">2024-02-20</td>
+                        <td class="px-4 py-3 text-sm">Generation</td>
+                        <td class="px-4 py-3 text-sm">50</td>
+                        <td class="px-4 py-3 text-sm">₹100,000</td>
+                        <td class="px-4 py-3">
+                            <span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Completed</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-3 text-sm">#CC-002</td>
+                        <td class="px-4 py-3 text-sm">2024-02-19</td>
+                        <td class="px-4 py-3 text-sm">Trade</td>
+                        <td class="px-4 py-3 text-sm">25</td>
+                        <td class="px-4 py-3 text-sm">₹52,500</td>
+                        <td class="px-4 py-3">
+                            <span class="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full">Pending</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="3e278366-539b-439b-9791-aee11ccf57e7" data-section-id="3e278366-539b-439b-9791-aee11ccf57e7">
+
+<htmlCode>
+<section id="notification_center" class="p-6 bg-gray-100">
+    <!-- Header -->
+    <div class="mb-8 flex justify-between items-center">
+        <div>
+            <h1 class="text-2xl font-bold text-gray-900">Notification Center</h1>
+            <p class="text-sm text-gray-600">Manage your alerts and notifications</p>
+        </div>
+        <div class="flex space-x-3">
+            <button class="px-4 py-2 bg-white border border-gray-200 rounded hover:bg-gray-50 flex items-center">
+                <svg class="w-4 h-4 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                </svg>
+                Mark All as Read
+            </button>
+            <button class="px-4 py-2 bg-white border border-gray-200 rounded hover:bg-gray-50 flex items-center">
+                <svg class="w-4 h-4 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                </svg>
+                Settings
+            </button>
+        </div>
+    </div>
+
+    <!-- Notification Categories -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+        <button class="p-4 bg-white rounded border border-gray-200 hover:border-emerald-500 transition-colors flex justify-between items-center">
+            <span class="text-sm font-medium">All Notifications</span>
+            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">45</span>
+        </button>
+        <button class="p-4 bg-white rounded border border-gray-200 hover:border-emerald-500 transition-colors flex justify-between items-center">
+            <span class="text-sm font-medium">Transactions</span>
+            <span class="px-2 py-1 bg-emerald-100 text-emerald-600 rounded-full text-xs">12</span>
+        </button>
+        <button class="p-4 bg-white rounded border border-gray-200 hover:border-emerald-500 transition-colors flex justify-between items-center">
+            <span class="text-sm font-medium">Reports</span>
+            <span class="px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs">8</span>
+        </button>
+        <button class="p-4 bg-white rounded border border-gray-200 hover:border-emerald-500 transition-colors flex justify-between items-center">
+            <span class="text-sm font-medium">System Updates</span>
+            <span class="px-2 py-1 bg-purple-100 text-purple-600 rounded-full text-xs">3</span>
+        </button>
+    </div>
+
+    <!-- Notifications List -->
+    <div class="bg-white rounded border border-gray-200">
+        <div class="p-4 border-b border-gray-200">
+            <h2 class="text-lg font-semibold">Recent Notifications</h2>
+        </div>
+        <div class="divide-y divide-gray-200">
+            <!-- Unread Notification -->
+            <div class="p-4 bg-gray-50">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                        <div>
+                            <p class="text-sm font-medium">New Transaction Report Available</p>
+                            <p class="text-sm text-gray-600">Monthly transaction report for February 2024 is ready for download</p>
+                            <p class="text-xs text-gray-500 mt-1">2 minutes ago</p>
+                        </div>
+                    </div>
+                    <button class="text-sm text-blue-600 hover:text-blue-800">View</button>
+                </div>
+            </div>
+
+            <!-- Read Notification -->
+            <div class="p-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+                        <div>
+                            <p class="text-sm font-medium">Carbon Credits Update</p>
+                            <p class="text-sm text-gray-600">You've earned 25 new carbon credits from recent transactions</p>
+                            <p class="text-xs text-gray-500 mt-1">1 hour ago</p>
+                        </div>
+                    </div>
+                    <button class="text-sm text-blue-600 hover:text-blue-800">View</button>
+                </div>
+            </div>
+
+            <!-- System Alert -->
+            <div class="p-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                        <div>
+                            <p class="text-sm font-medium">System Maintenance Notice</p>
+                            <p class="text-sm text-gray-600">Scheduled maintenance on February 25, 2024, from 2:00 AM to 4:00 AM IST</p>
+                            <p class="text-xs text-gray-500 mt-1">3 hours ago</p>
+                        </div>
+                    </div>
+                    <button class="text-sm text-blue-600 hover:text-blue-800">View</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="p-4 border-t border-gray-200">
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-600">Showing 1-3 of 45 notifications</p>
+                <div class="flex space-x-2">
+                    <button class="px-3 py-1 border border-gray-200 rounded hover:bg-gray-50">Previous</button>
+                    <button class="px-3 py-1 border border-gray-200 rounded bg-emerald-500 text-white">1</button>
+                    <button class="px-3 py-1 border border-gray-200 rounded hover:bg-gray-50">2</button>
+                    <button class="px-3 py-1 border border-gray-200 rounded hover:bg-gray-50">3</button>
+                    <button class="px-3 py-1 border border-gray-200 rounded hover:bg-gray-50">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="93c1191c-37d1-4eed-94d5-c389ecbcbcaa" data-section-id="93c1191c-37d1-4eed-94d5-c389ecbcbcaa">
+
+<htmlCode>
+<div id="root">
+  <section id="report_exports" class="bg-neutral-900 min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <!-- Header -->
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold text-white mb-2">Transaction Reports</h2>
+        <p class="text-neutral-400">Export and manage your transaction reports</p>
+      </div>
+
+      <!-- Export Options -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <!-- PDF Export Card -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-lg p-6 hover:border-neutral-600 transition duration-300">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-semibold text-white">PDF Export</h3>
+            <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <button class="w-full bg-neutral-700 hover:bg-neutral-600 text-white py-2 rounded-md transition duration-300">Generate PDF</button>
+        </div>
+
+        <!-- Excel Export Card -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-lg p-6 hover:border-neutral-600 transition duration-300">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-semibold text-white">Excel Export</h3>
+            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <button class="w-full bg-neutral-700 hover:bg-neutral-600 text-white py-2 rounded-md transition duration-300">Generate Excel</button>
+        </div>
+
+        <!-- Email/SMS Report Card -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-lg p-6 hover:border-neutral-600 transition duration-300">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-semibold text-white">Monthly Reports</h3>
+            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <button class="w-full bg-neutral-700 hover:bg-neutral-600 text-white py-2 rounded-md transition duration-300">Configure Notifications</button>
+        </div>
+      </div>
+
+      <!-- Recent Reports Table -->
+      <div class="bg-neutral-800 rounded-lg border border-neutral-700 overflow-hidden">
+        <div class="px-6 py-4 border-b border-neutral-700">
+          <h3 class="text-lg font-semibold text-white">Recent Reports</h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr class="bg-neutral-700">
+                <th class="px-6 py-3 text-left text-xs font-medium text-neutral-300 uppercase tracking-wider">Report Name</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-neutral-300 uppercase tracking-wider">Type</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-neutral-300 uppercase tracking-wider">Date Generated</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-neutral-300 uppercase tracking-wider">Size</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-neutral-300 uppercase tracking-wider">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-neutral-700">
+              <tr class="hover:bg-neutral-700/50">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">January Transactions</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-300">PDF</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-300">2024-01-31</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-300">2.4 MB</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-300">
+                  <button class="text-blue-400 hover:text-blue-300">Download</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-neutral-700/50">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Q4 Summary</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-300">Excel</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-300">2023-12-31</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-300">5.1 MB</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-300">
+                  <button class="text-blue-400 hover:text-blue-300">Download</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-neutral-700/50">
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white">December Analysis</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-300">PDF</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-300">2023-12-15</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-300">1.8 MB</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-300">
+                  <button class="text-blue-400 hover:text-blue-300">Download</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="01b0f5e7-acc4-47f7-8b32-528be893c666" data-section-id="01b0f5e7-acc4-47f7-8b32-528be893c666">
+
+<htmlCode>
+<div id="root">
+  <section id="settings" class="bg-neutral-900 min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <!-- Header -->
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold text-white mb-2">Dashboard Settings</h2>
+        <p class="text-neutral-400">Customize your dashboard preferences and notifications</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Settings Column -->
+        <div class="lg:col-span-2 space-y-6">
+          <!-- Profile Settings -->
+          <div class="bg-neutral-800 rounded-lg border border-neutral-700 p-6">
+            <h3 class="text-lg font-semibold text-white mb-4">User Profile</h3>
+            <div class="space-y-4">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-neutral-300 mb-1">Account Type</label>
+                  <select class="w-full bg-neutral-700 border border-neutral-600 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option>Buyer</option>
+                    <option>Seller</option>
+                    <option>Admin</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-neutral-300 mb-1">Business Name</label>
+                  <input type="text" class="w-full bg-neutral-700 border border-neutral-600 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-neutral-300 mb-1">Business ID</label>
+                <input type="text" class="w-full bg-neutral-700 border border-neutral-600 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" readonly>
+              </div>
+            </div>
+          </div>
+
+          <!-- Report Preferences -->
+          <div class="bg-neutral-800 rounded-lg border border-neutral-700 p-6">
+            <h3 class="text-lg font-semibold text-white mb-4">Report Preferences</h3>
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-neutral-300">Monthly Report Emails</span>
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" class="sr-only peer" checked>
+                  <div class="w-11 h-6 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-blue-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+                </label>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-neutral-300">SMS Notifications</span>
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" class="sr-only peer">
+                  <div class="w-11 h-6 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-blue-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+                </label>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-neutral-300 mb-1">Default Export Format</label>
+                <select class="w-full bg-neutral-700 border border-neutral-600 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <option>PDF</option>
+                  <option>Excel</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Impact Tracking -->
+          <div class="bg-neutral-800 rounded-lg border border-neutral-700 p-6">
+            <h3 class="text-lg font-semibold text-white mb-4">Impact Tracking Settings</h3>
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-neutral-300">Track Carbon Credits</span>
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" class="sr-only peer" checked>
+                  <div class="w-11 h-6 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-blue-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+                </label>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-neutral-300">Track Plastic Credits</span>
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" class="sr-only peer" checked>
+                  <div class="w-11 h-6 bg-neutral-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-blue-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side Column -->
+        <div class="space-y-6">
+          <!-- Quick Actions -->
+          <div class="bg-neutral-800 rounded-lg border border-neutral-700 p-6">
+            <h3 class="text-lg font-semibold text-white mb-4">Quick Actions</h3>
+            <div class="space-y-3">
+              <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition duration-300">Save Changes</button>
+              <button class="w-full bg-neutral-700 hover:bg-neutral-600 text-white py-2 px-4 rounded-md transition duration-300">Reset Defaults</button>
+              <button class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-md transition duration-300">Clear Data</button>
+            </div>
+          </div>
+
+          <!-- API Access -->
+          <div class="bg-neutral-800 rounded-lg border border-neutral-700 p-6">
+            <h3 class="text-lg font-semibold text-white mb-4">API Access</h3>
+            <div class="space-y-3">
+              <div>
+                <label class="block text-sm font-medium text-neutral-300 mb-1">API Key</label>
+                <div class="flex">
+                  <input type="password" value="••••••••••••••••" class="flex-1 bg-neutral-700 border border-neutral-600 rounded-l-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" readonly>
+                  <button class="bg-neutral-600 px-4 rounded-r-md hover:bg-neutral-500 transition duration-300">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <button class="w-full bg-neutral-700 hover:bg-neutral-600 text-white py-2 px-4 rounded-md transition duration-300">Generate New Key</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
