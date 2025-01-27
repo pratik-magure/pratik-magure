@@ -1,0 +1,1394 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+       <title>{{project.seoTitle}}</title>
+      <!-- SEO Description -->
+      <meta name="description" content="{{project.seoDescription}}">
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- {headerScripts} -->
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="keywords" content="{{project.meta.keywords}}">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      <meta name="google-site-verification" content="{{project.meta.googleVerification}}">
+      <meta name="baidu-verification" content="{{project.meta.baiduVerification}}">
+      <meta name="yandex-verification" content="{{project.meta.yandexVerification}}">
+      <meta name="bing-verification" content="{{project.meta.bingVerification}}">
+      <meta property="og:title" content="{{project.meta.ogTitle}}">
+      <meta property="og:description" content="{{project.meta.ogDescription}}">
+      <meta property="og:image" content="{{project.meta.ogImage}}">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="{{project.name}}">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="{{project.meta.ogTitle}}">
+      <meta name="twitter:description" content="{{project.meta.ogDescription}}">
+      <meta name="twitter:image" content="{{project.meta.ogImage}}">
+
+      <!-- Base Styles -->
+      <style>
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="25e7d6c6-350d-4c62-87e3-5d1b92ba9b4e" data-section-id="25e7d6c6-350d-4c62-87e3-5d1b92ba9b4e">
+
+<htmlCode>
+<div id="root">
+  <nav id="navbar" class="fixed w-full z-50 bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <span class="text-2xl font-bold text-[#4567b7]">PriceIndex</span>
+          </div>
+        </div>
+        
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="#priceIndex" class="hover:bg-[#4567b7] px-3 py-2 rounded-md text-sm font-medium">Price Index</a>
+            <a href="#marketAnalytics" class="hover:bg-[#4567b7] px-3 py-2 rounded-md text-sm font-medium">Market Analytics</a>
+            <a href="#priceMatch" class="hover:bg-[#4567b7] px-3 py-2 rounded-md text-sm font-medium">Price Match</a>
+            <a href="#aiPredictions" class="hover:bg-[#4567b7] px-3 py-2 rounded-md text-sm font-medium">AI Predictions</a>
+            <a href="#marketplace" class="hover:bg-[#4567b7] px-3 py-2 rounded-md text-sm font-medium">Marketplace</a>
+            <a href="#subscriptionPlans" class="hover:bg-[#4567b7] px-3 py-2 rounded-md text-sm font-medium">Subscription</a>
+          </div>
+        </div>
+
+        <div class="flex md:hidden">
+          <button type="button" class="hamburger-btn inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-[#4567b7]" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="#priceIndex" class="hover:bg-[#4567b7] block px-3 py-2 rounded-md text-base font-medium">Price Index</a>
+        <a href="#marketAnalytics" class="hover:bg-[#4567b7] block px-3 py-2 rounded-md text-base font-medium">Market Analytics</a>
+        <a href="#priceMatch" class="hover:bg-[#4567b7] block px-3 py-2 rounded-md text-base font-medium">Price Match</a>
+        <a href="#aiPredictions" class="hover:bg-[#4567b7] block px-3 py-2 rounded-md text-base font-medium">AI Predictions</a>
+        <a href="#marketplace" class="hover:bg-[#4567b7] block px-3 py-2 rounded-md text-base font-medium">Marketplace</a>
+        <a href="#subscriptionPlans" class="hover:bg-[#4567b7] block px-3 py-2 rounded-md text-base font-medium">Subscription</a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    const hamburgerBtn = document.querySelector('.hamburger-btn');
+    const mobileMenu = document.querySelector('#mobile-menu');
+    const hamburgerIcon = hamburgerBtn.querySelector('svg:first-child');
+    const closeIcon = hamburgerBtn.querySelector('svg:last-child');
+
+    hamburgerBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      hamburgerIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+  </script>
+</div>
+</htmlCode></element><element id="031f9f4a-15d4-4769-b5d9-e4c8a69e5671" data-section-id="031f9f4a-15d4-4769-b5d9-e4c8a69e5671">
+
+<htmlCode>
+<div id="root">
+  <section id="hero" class="h-screen bg-neutral-900 text-white pt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+      <div class="flex flex-col md:flex-row items-center justify-between h-full">
+        <div class="md:w-1/2 animate__animated animate__fadeInLeft">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Real-Time <span class="text-[#4567b7]">Price Index</span> Analytics
+          </h1>
+          <p class="text-xl mb-8 text-gray-300">
+            Track market trends, analyze price movements, and make data-driven decisions with our advanced price monitoring system.
+          </p>
+          <div class="flex gap-4">
+            <button class="bg-[#4567b7] hover:bg-[#6495ed] px-6 py-3 rounded-lg transition-all duration-300 font-semibold">
+              Get Started
+            </button>
+            <button class="border border-[#4567b7] hover:bg-[#4567b7] px-6 py-3 rounded-lg transition-all duration-300">
+              Watch Demo
+            </button>
+          </div>
+        </div>
+
+        <div class="md:w-1/2 mt-8 md:mt-0 animate__animated animate__fadeInRight">
+          <div class="bg-neutral-800 p-6 rounded-xl shadow-lg">
+            <div class="mb-6">
+              <h3 class="text-lg font-semibold mb-2">Live Price Updates</h3>
+              <div class="flex justify-between items-center bg-neutral-700 p-4 rounded-lg">
+                <span>Raw Materials Index</span>
+                <span class="text-[#6495ed] font-bold" id="priceTickerValue">$1,234.56</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-neutral-700 p-4 rounded-lg">
+                <div class="text-sm text-gray-400">Metals</div>
+                <div class="text-lg font-bold text-[#6495ed]">+2.4%</div>
+              </div>
+              <div class="bg-neutral-700 p-4 rounded-lg">
+                <div class="text-sm text-gray-400">Energy</div>
+                <div class="text-lg font-bold text-[#6495ed]">-1.2%</div>
+              </div>
+              <div class="bg-neutral-700 p-4 rounded-lg">
+                <div class="text-sm text-gray-400">Agriculture</div>
+                <div class="text-lg font-bold text-[#6495ed]">+0.8%</div>
+              </div>
+              <div class="bg-neutral-700 p-4 rounded-lg">
+                <div class="text-sm text-gray-400">Chemicals</div>
+                <div class="text-lg font-bold text-[#6495ed]">+1.5%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Simulated price ticker animation
+    function updatePriceTicker() {
+      const tickerElement = document.getElementById('priceTickerValue');
+      let basePrice = 1234.56;
+      
+      setInterval(() => {
+        const change = (Math.random() - 0.5) * 10;
+        basePrice += change;
+        tickerElement.textContent = `$${basePrice.toFixed(2)}`;
+        
+        if (change > 0) {
+          tickerElement.classList.add('text-green-500');
+          tickerElement.classList.remove('text-red-500');
+        } else {
+          tickerElement.classList.add('text-red-500');
+          tickerElement.classList.remove('text-green-500');
+        }
+      }, 2000);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      updatePriceTicker();
+    });
+  </script>
+</div>
+</htmlCode></element><element id="e188e352-7675-4d48-a94a-ef26be2f921b" data-section-id="e188e352-7675-4d48-a94a-ef26be2f921b">
+
+<htmlCode>
+<div id="root">
+  <section id="priceIndex" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 animate__animated animate__fadeIn">
+        <h2 class="text-3xl font-bold text-neutral-900 mb-4">Price Index Dashboard</h2>
+        <p class="text-gray-600">Monitor real-time market prices across different material categories</p>
+      </div>
+
+      <div class="mb-8">
+        <div class="flex flex-wrap gap-4 justify-center mb-6">
+          <div class="relative">
+            <select class="bg-white border border-gray-300 rounded-lg px-4 py-2 appearance-none pr-8">
+              <option>All Categories</option>
+              <option>Metals</option>
+              <option>Energy</option>
+              <option>Agriculture</option>
+              <option>Chemicals</option>
+            </select>
+            <div class="absolute right-2 top-1/2 transform -translate-y-1/2">
+              <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+          </div>
+          <input type="text" placeholder="Search materials..." class="border border-gray-300 rounded-lg px-4 py-2">
+          <button class="bg-[#4567b7] text-white px-4 py-2 rounded-lg hover:bg-[#6495ed] transition-colors">
+            Filter Results
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow animate__animated animate__fadeInUp">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="font-semibold text-lg">Metals Index</h3>
+            <span class="text-green-500 font-bold">↑ 2.4%</span>
+          </div>
+          <div class="h-40 bg-gray-100 rounded-lg mb-4" id="metalsChart"></div>
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <p class="text-gray-600">Current</p>
+              <p class="font-bold">$1,234.56</p>
+            </div>
+            <div>
+              <p class="text-gray-600">24h Change</p>
+              <p class="text-green-500">+$28.45</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="font-semibold text-lg">Energy Index</h3>
+            <span class="text-red-500 font-bold">↓ 1.2%</span>
+          </div>
+          <div class="h-40 bg-gray-100 rounded-lg mb-4" id="energyChart"></div>
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <p class="text-gray-600">Current</p>
+              <p class="font-bold">$876.32</p>
+            </div>
+            <div>
+              <p class="text-gray-600">24h Change</p>
+              <p class="text-red-500">-$10.45</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="font-semibold text-lg">Agriculture Index</h3>
+            <span class="text-green-500 font-bold">↑ 0.8%</span>
+          </div>
+          <div class="h-40 bg-gray-100 rounded-lg mb-4" id="agricultureChart"></div>
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <p class="text-gray-600">Current</p>
+              <p class="font-bold">$543.21</p>
+            </div>
+            <div>
+              <p class="text-gray-600">24h Change</p>
+              <p class="text-green-500">+$4.32</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button class="bg-[#4567b7] text-white px-6 py-3 rounded-lg hover:bg-[#6495ed] transition-colors">
+          View Detailed Analytics
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const chartConfigs = {
+        type: 'line',
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+          datasets: [{
+            data: [65, 59, 80, 81, 56, 55],
+            borderColor: '#4567b7',
+            tension: 0.4,
+            fill: false
+          }]
+        },
+        options: {
+          plugins: { legend: { display: false } },
+          responsive: true,
+          scales: {
+            y: { beginAtZero: true }
+          }
+        }
+      };
+
+      ['metals', 'energy', 'agriculture'].forEach(type => {
+        const ctx = document.getElementById(`${type}Chart`).getContext('2d');
+        new Chart(ctx, chartConfigs);
+      });
+    });
+  </script>
+</div>
+</htmlCode></element><element id="445a10c5-0d15-45ec-afb6-ab4e92149c47" data-section-id="445a10c5-0d15-45ec-afb6-ab4e92149c47">
+
+<htmlCode>
+<div id="root">
+  <section id="marketAnalytics" class="py-20 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 animate__animated animate__fadeIn">
+        <h2 class="text-3xl font-bold text-neutral-900 mb-4">Market Analytics</h2>
+        <p class="text-gray-600">Comprehensive market analysis and trend visualization</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2 bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeInLeft">
+          <div class="flex justify-between items-center mb-6">
+            <h3 class="font-semibold text-lg">Price Trends Analysis</h3>
+            <div class="flex gap-2">
+              <button class="px-3 py-1 text-sm rounded-lg bg-[#4567b7] text-white">1D</button>
+              <button class="px-3 py-1 text-sm rounded-lg border border-gray-300">1W</button>
+              <button class="px-3 py-1 text-sm rounded-lg border border-gray-300">1M</button>
+              <button class="px-3 py-1 text-sm rounded-lg border border-gray-300">1Y</button>
+            </div>
+          </div>
+          <div class="h-80 bg-white rounded-lg" id="trendChart"></div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeInRight">
+            <h3 class="font-semibold text-lg mb-4">Market Summary</h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <span class="text-gray-600">Market Cap</span>
+                <span class="font-bold">$2.4T</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-600">24h Volume</span>
+                <span class="font-bold">$156.8B</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-600">Volatility Index</span>
+                <span class="font-bold text-yellow-500">Medium</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeInRight" style="animation-delay: 0.2s">
+            <h3 class="font-semibold text-lg mb-4">Top Movers</h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <span>Steel</span>
+                <span class="text-green-500">+5.2%</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span>Copper</span>
+                <span class="text-red-500">-3.1%</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span>Aluminum</span>
+                <span class="text-green-500">+2.8%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 bg-white rounded-xl shadow-lg p-6 animate__animated animate__fadeInUp">
+          <h3 class="font-semibold text-lg mb-6">Geographic Price Distribution</h3>
+          <div class="h-96 bg-gray-100 rounded-lg" id="heatmap"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Trend Chart
+      const trendCtx = document.getElementById('trendChart').getContext('2d');
+      new Chart(trendCtx, {
+        type: 'line',
+        data: {
+          labels: Array.from({length: 30}, (_, i) => i + 1),
+          datasets: [{
+            label: 'Price Index',
+            data: Array.from({length: 30}, () => Math.random() * 100 + 50),
+            borderColor: '#4567b7',
+            tension: 0.4,
+            fill: false
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: false
+            }
+          }
+        }
+      });
+
+      // Heatmap simulation (basic visualization)
+      const heatmapCtx = document.getElementById('heatmap').getContext('2d');
+      new Chart(heatmapCtx, {
+        type: 'scatter',
+        data: {
+          datasets: [{
+            data: Array.from({length: 50}, () => ({
+              x: Math.random() * 100,
+              y: Math.random() * 100,
+              r: Math.random() * 20 + 5
+            })),
+            backgroundColor: '#4567b7'
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false
+            }
+          },
+          scales: {
+            x: {
+              grid: {
+                display: false
+              }
+            },
+            y: {
+              grid: {
+                display: false
+              }
+            }
+          }
+        }
+      });
+    });
+  </script>
+</div>
+</htmlCode></element><element id="362be27a-e302-40cb-959e-6817040b7e63" data-section-id="362be27a-e302-40cb-959e-6817040b7e63">
+
+<htmlCode>
+<div id="root">
+  <section id="priceMatch" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 animate__animated animate__fadeIn">
+        <h2 class="text-3xl font-bold text-neutral-900 mb-4">Price Match Request</h2>
+        <p class="text-gray-600">Submit your price match request and get competitive rates</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="animate__animated animate__fadeInLeft">
+          <form class="space-y-6">
+            <div class="bg-white rounded-xl shadow-lg p-8">
+              <div class="space-y-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Material Category</label>
+                  <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#4567b7] focus:border-[#4567b7] outline-none">
+                    <option>Select Category</option>
+                    <option>Metals</option>
+                    <option>Energy</option>
+                    <option>Agriculture</option>
+                    <option>Chemicals</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Material Name</label>
+                  <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#4567b7] focus:border-[#4567b7] outline-none" placeholder="Enter material name">
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Current Market Price</label>
+                  <input type="number" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#4567b7] focus:border-[#4567b7] outline-none" placeholder="Enter price">
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Quantity Required</label>
+                  <input type="number" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#4567b7] focus:border-[#4567b7] outline-none" placeholder="Enter quantity">
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Request Rationale</label>
+                  <textarea rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#4567b7] focus:border-[#4567b7] outline-none" placeholder="Explain your price match request"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="w-full bg-[#4567b7] text-white py-3 rounded-lg hover:bg-[#6495ed] transition-colors font-semibold">
+              Submit Price Match Request
+            </button>
+          </form>
+        </div>
+
+        <div class="animate__animated animate__fadeInRight">
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h3 class="text-xl font-semibold mb-6">Your Account Manager</h3>
+            
+            <div class="flex items-center mb-6">
+              <div class="w-16 h-16 bg-[#4567b7] rounded-full flex items-center justify-center text-white text-xl font-bold">
+                AM
+              </div>
+              <div class="ml-4">
+                <h4 class="font-semibold">Sarah Johnson</h4>
+                <p class="text-gray-600">Senior Account Manager</p>
+              </div>
+            </div>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-[#4567b7] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <span>sarah.j@priceindex.com</span>
+              </div>
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-[#4567b7] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+                <span>+1 (555) 123-4567</span>
+              </div>
+            </div>
+
+            <div class="bg-neutral-100 rounded-lg p-6">
+              <h4 class="font-semibold mb-2">Average Response Time</h4>
+              <p class="text-green-600 font-bold">Within 2 hours</p>
+              <p class="text-sm text-gray-600 mt-2">We prioritize price match requests and aim to respond as quickly as possible.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="1336e203-2754-47d4-a2a4-08a0f85e516f" data-section-id="1336e203-2754-47d4-a2a4-08a0f85e516f">
+
+<htmlCode>
+<div id="root">
+  <section id="aiPredictions" class="py-20 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 animate__animated animate__fadeIn">
+        <h2 class="text-3xl font-bold text-neutral-900 mb-4">AI-Powered Price Predictions</h2>
+        <p class="text-gray-600">Advanced analytics and predictive insights for market trends</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2 space-y-8 animate__animated animate__fadeInLeft">
+          <div class="bg-white rounded-xl shadow-lg p-6">
+            <h3 class="text-xl font-semibold mb-6">Price Forecast</h3>
+            <div class="h-80" id="forecastChart"></div>
+            <div class="mt-4 flex justify-between text-sm text-gray-600">
+              <span>Confidence Interval: 95%</span>
+              <span>Updated: Real-time</span>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex justify-between items-center mb-6">
+              <h3 class="text-xl font-semibold">Prediction Alerts</h3>
+              <button class="text-[#4567b7] hover:text-[#6495ed]">Configure Alerts</button>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="flex items-center p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+                <svg class="w-6 h-6 text-yellow-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                </svg>
+                <div>
+                  <h4 class="font-semibold">Potential Price Surge</h4>
+                  <p class="text-sm text-gray-600">Steel prices expected to increase by 8% in next 30 days</p>
+                </div>
+              </div>
+
+              <div class="flex items-center p-4 bg-blue-50 rounded-lg border border-blue-200">
+                <svg class="w-6 h-6 text-[#4567b7] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <div>
+                  <h4 class="font-semibold">Market Opportunity</h4>
+                  <p class="text-sm text-gray-600">Aluminum prices at optimal buying point</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-8 animate__animated animate__fadeInRight">
+          <div class="bg-white rounded-xl shadow-lg p-6">
+            <h3 class="text-xl font-semibold mb-6">Confidence Metrics</h3>
+            <div class="space-y-6">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium">Short-term Prediction</span>
+                  <span class="text-sm font-bold text-green-500">92%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-green-500 h-2 rounded-full" style="width: 92%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium">Mid-term Prediction</span>
+                  <span class="text-sm font-bold text-blue-500">85%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium">Long-term Prediction</span>
+                  <span class="text-sm font-bold text-yellow-500">76%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-yellow-500 h-2 rounded-full" style="width: 76%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg p-6">
+            <h3 class="text-xl font-semibold mb-6">Market Sentiment</h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <span>Bull Market Probability</span>
+                <span class="text-green-500 font-bold">65%</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span>Bear Market Probability</span>
+                <span class="text-red-500 font-bold">35%</span>
+              </div>
+              <div class="h-40" id="sentimentChart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Forecast Chart
+      const forecastCtx = document.getElementById('forecastChart').getContext('2d');
+      new Chart(forecastCtx, {
+        type: 'line',
+        data: {
+          labels: Array.from({length: 12}, (_, i) => `Month ${i + 1}`),
+          datasets: [{
+            label: 'Actual Price',
+            data: Array.from({length: 6}, () => Math.random() * 100 + 50),
+            borderColor: '#4567b7',
+            tension: 0.4
+          }, {
+            label: 'Predicted Price',
+            data: Array.from({length: 12}, () => Math.random() * 100 + 50),
+            borderColor: '#6495ed',
+            borderDash: [5, 5],
+            tension: 0.4
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top'
+            }
+          }
+        }
+      });
+
+      // Sentiment Chart
+      const sentimentCtx = document.getElementById('sentimentChart').getContext('2d');
+      new Chart(sentimentCtx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Bull', 'Bear'],
+          datasets: [{
+            data: [65, 35],
+            backgroundColor: ['#22c55e', '#ef4444']
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+    });
+  </script>
+</div>
+</htmlCode></element><element id="4bcedf02-1f9a-413a-a7ab-7b23682ab31e" data-section-id="4bcedf02-1f9a-413a-a7ab-7b23682ab31e">
+
+<htmlCode>
+<div id="root">
+  <section id="marketplace" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 animate__animated animate__fadeIn">
+        <h2 class="text-3xl font-bold text-neutral-900 mb-4">Raw Materials Marketplace</h2>
+        <p class="text-gray-600">Browse and purchase materials at competitive prices</p>
+      </div>
+
+      <div class="mb-8 animate__animated animate__fadeInUp">
+        <div class="flex flex-wrap gap-4 justify-between items-center">
+          <div class="flex gap-4 flex-wrap">
+            <select class="border border-gray-300 rounded-lg px-4 py-2">
+              <option>All Categories</option>
+              <option>Metals</option>
+              <option>Energy</option>
+              <option>Agriculture</option>
+              <option>Chemicals</option>
+            </select>
+            <input type="text" placeholder="Search materials..." class="border border-gray-300 rounded-lg px-4 py-2">
+            <button class="bg-[#4567b7] text-white px-4 py-2 rounded-lg hover:bg-[#6495ed] transition-colors">
+              Search
+            </button>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-gray-600">Sort by:</span>
+            <select class="border border-gray-300 rounded-lg px-4 py-2">
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Most Popular</option>
+              <option>Recently Added</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow animate__animated animate__fadeIn">
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-semibold">Steel Plates</h3>
+              <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">In Stock</span>
+            </div>
+            <div class="space-y-4">
+              <p class="text-gray-600">High-quality steel plates, ideal for construction and manufacturing.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-2xl font-bold text-[#4567b7]">$899/ton</span>
+                <span class="text-sm text-gray-500">MOQ: 5 tons</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">Supplier: MetalCorp Inc.</span>
+                <span class="text-sm text-green-500">★★★★☆ 4.2</span>
+              </div>
+              <button class="w-full bg-[#4567b7] text-white py-2 rounded-lg hover:bg-[#6495ed] transition-colors">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow animate__animated animate__fadeIn" style="animation-delay: 0.2s">
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-semibold">Copper Wire</h3>
+              <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Limited Stock</span>
+            </div>
+            <div class="space-y-4">
+              <p class="text-gray-600">Premium grade copper wire, suitable for electrical applications.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-2xl font-bold text-[#4567b7]">$1,299/ton</span>
+                <span class="text-sm text-gray-500">MOQ: 2 tons</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">Supplier: CopperTech Ltd.</span>
+                <span class="text-sm text-green-500">★★★★★ 4.8</span>
+              </div>
+              <button class="w-full bg-[#4567b7] text-white py-2 rounded-lg hover:bg-[#6495ed] transition-colors">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow animate__animated animate__fadeIn" style="animation-delay: 0.4s">
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-semibold">Aluminum Sheets</h3>
+              <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">In Stock</span>
+            </div>
+            <div class="space-y-4">
+              <p class="text-gray-600">Industrial grade aluminum sheets for diverse applications.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-2xl font-bold text-[#4567b7]">$749/ton</span>
+                <span class="text-sm text-gray-500">MOQ: 3 tons</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">Supplier: AluMax Industries</span>
+                <span class="text-sm text-green-500">★★★★☆ 4.5</span>
+              </div>
+              <button class="w-full bg-[#4567b7] text-white py-2 rounded-lg hover:bg-[#6495ed] transition-colors">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button class="bg-white border border-[#4567b7] text-[#4567b7] px-6 py-3 rounded-lg hover:bg-[#4567b7] hover:text-white transition-colors">
+          Load More Products
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="54c30ef1-2a92-4ad4-828d-702407380a92" data-section-id="54c30ef1-2a92-4ad4-828d-702407380a92">
+
+<htmlCode>
+<div id="root">
+  <section id="subscriptionPlans" class="py-20 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 animate__animated animate__fadeIn">
+        <h2 class="text-3xl font-bold text-neutral-900 mb-4">Subscription Plans</h2>
+        <p class="text-gray-600">Choose the perfect plan for your business needs</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 animate__animated animate__fadeInUp">
+          <div class="text-center mb-8">
+            <h3 class="text-xl font-bold mb-4">Basic</h3>
+            <div class="text-4xl font-bold text-[#4567b7] mb-4">
+              $99<span class="text-lg text-gray-500">/mo</span>
+            </div>
+            <p class="text-gray-600">Essential features for small businesses</p>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Basic Price Index Access
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              5 Price Match Requests/month
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Basic Market Analytics
+            </li>
+          </ul>
+          <button class="w-full bg-[#4567b7] text-white py-3 rounded-lg hover:bg-[#6495ed] transition-colors">
+            Get Started
+          </button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 animate__animated animate__fadeInUp relative" style="animation-delay: 0.2s">
+          <div class="absolute top-0 right-0 bg-[#4567b7] text-white px-4 py-1 rounded-tr-xl rounded-bl-xl text-sm">
+            Popular
+          </div>
+          <div class="text-center mb-8">
+            <h3 class="text-xl font-bold mb-4">Professional</h3>
+            <div class="text-4xl font-bold text-[#4567b7] mb-4">
+              $199<span class="text-lg text-gray-500">/mo</span>
+            </div>
+            <p class="text-gray-600">Advanced features for growing companies</p>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Full Price Index Access
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              20 Price Match Requests/month
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Advanced Analytics + AI Predictions
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Priority Support
+            </li>
+          </ul>
+          <button class="w-full bg-[#4567b7] text-white py-3 rounded-lg hover:bg-[#6495ed] transition-colors">
+            Get Started
+          </button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+          <div class="text-center mb-8">
+            <h3 class="text-xl font-bold mb-4">Enterprise</h3>
+            <div class="text-4xl font-bold text-[#4567b7] mb-4">
+              Custom
+            </div>
+            <p class="text-gray-600">Tailored solutions for large organizations</p>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Unlimited Access
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Unlimited Price Match Requests
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Custom Analytics Solutions
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Dedicated Account Manager
+            </li>
+          </ul>
+          <button class="w-full bg-[#4567b7] text-white py-3 rounded-lg hover:bg-[#6495ed] transition-colors">
+            Contact Sales
+          </button>
+        </div>
+      </div>
+
+      <div class="text-center animate__animated animate__fadeIn">
+        <p class="text-gray-600 mb-4">All plans include basic features like real-time updates and market alerts</p>
+        <a href="#" class="text-[#4567b7] hover:text-[#6495ed] font-semibold">View Full Feature Comparison →</a>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="4b8b98f7-3b3d-4755-9e5d-a0615ca93326" data-section-id="4b8b98f7-3b3d-4755-9e5d-a0615ca93326">
+
+<htmlCode>
+<div id="root">
+  <footer id="footer" class="bg-neutral-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div class="space-y-4">
+          <h3 class="text-2xl font-bold text-[#4567b7]">PriceIndex</h3>
+          <p class="text-gray-400">Real-time market intelligence for raw materials and commodities.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-[#4567b7]">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-[#4567b7]">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-[#4567b7]">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="text-lg font-semibold">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#priceIndex" class="text-gray-400 hover:text-[#4567b7]">Price Index</a></li>
+            <li><a href="#marketAnalytics" class="text-gray-400 hover:text-[#4567b7]">Market Analytics</a></li>
+            <li><a href="#priceMatch" class="text-gray-400 hover:text-[#4567b7]">Price Match</a></li>
+            <li><a href="#aiPredictions" class="text-gray-400 hover:text-[#4567b7]">AI Predictions</a></li>
+            <li><a href="#marketplace" class="text-gray-400 hover:text-[#4567b7]">Marketplace</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="text-lg font-semibold">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-[#4567b7]">Documentation</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-[#4567b7]">API Access</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-[#4567b7]">Market Reports</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-[#4567b7]">Blog</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-[#4567b7]">Support Center</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="text-lg font-semibold">Contact Us</h4>
+          <ul class="space-y-2">
+            <li class="flex items-center text-gray-400">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              support@priceindex.com
+            </li>
+            <li class="flex items-center text-gray-400">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              +1 (555) 123-4567
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-12 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm">© 2024 PriceIndex. All rights reserved.</p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" class="text-gray-400 hover:text-[#4567b7] text-sm">Privacy Policy</a>
+            <a href="#" class="text-gray-400 hover:text-[#4567b7] text-sm">Terms of Service</a>
+            <a href="#" class="text-gray-400 hover:text-[#4567b7] text-sm">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
